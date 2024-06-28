@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Akash Bambhaniya's personal portfolio. Full Stack Developer specializing in React.js & Node.js, creating exceptional digital experiences." />
+  <meta name="keywords"
+    content="Full Stack Developer, React.js, Node.js, Web Development, Portfolio, Akash Bambhaniya" />
+  <meta name="author" content="Akash Bambhaniya" />
+  <title>Akash Bambhaniya - Full Stack Developer Portfolio</title>
+
+  <!-- Stylesheets -->
+  <link href="../src/output.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+  <nav class="bg-white border-gray-200 bg-gray-900 shadow-custom-gray fixed top-0 w-full z-50">
+    <div class="container mx-auto flex flex-wrap items-center justify-between p-4">
+      <span class="self-center text-title font-semibold whitespace-nowrap text-gradient font-audiowide">akash</span>
+
+      <button id="menu-toggle" type="button"
+        class="items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden text-gray-400"
+        aria-controls="navbar-default" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+
+        <!-- Hamburger Icon -->
+        <svg id="menu-toggle-icon" class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+          viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15" />
+        </svg>
+
+        <!-- Cross Icon (Initially Hidden) -->
+        <img id="menu-toggle-x" class="w-5 h-5 hidden" src="../src/Images/close.png" alt="Close menu" />
+      </button>
+
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul class="font-medium flex flex-col md:flex-row gap-6 md:items-center">
+          <li>
+            <a href="#homediv" class="font-poppins hover:text-gradient">Home</a>
+          </li>
+          <li>
+            <a href="#aboutdiv" class="font-poppins hover:text-gradient">About
+              Us</a>
+          </li>
+          <li>
+            <a href="#servicesdiv" class="font-poppins hover:text-gradient">Services</a>
+          </li>
+          <li>
+            <a href="#portfoliodiv" class="font-poppins hover:text-gradient">Portfolio</a>
+          </li>
+          <li>
+            <a href="#contactdiv" class="font-poppins hover:text-gradient">Contact
+              Us</a>
+          </li>
+          <li>
+            <button type="button" class="font-poppins text-white bg-gradient font-medium rounded-lg px-3 py-2">Hire
+              Me</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="mainHome w-full home-bg-gradient pt-20" id="homediv">
+    <div class="flex flex-col justify-center items-center p-6">
+      <img src="../src/Images/homePhoto.png" class="h-96 max-sm:h-80" alt="home photo" />
+      <div class="flex mt-1">
+        <span class="md:text-title font-poppins font-bold max-sm:text-xl">Hi, I’m </span>
+        <span class="md:text-title text-gradient ml-2 font-bold max-sm:text-xl font-poppins">Akash Bambhaniya 👋</span>
+      </div>
+      <div class="paraHome w-[50vw] mt-2 max-sm:w-full max-sm:px-4 max-sm:mb-6">
+        <p
+          class="font-poppins text-desccolor max-sm:text-sm max-sm:leading-tight md:text-center md:text-desc max-sm:w-full mt-2">
+          I'm a full stack developer (React.js & Node.js) with a focus on creating exceptional digital experiences that
+          are fast, accessible, visually appealing, and responsive. Even though I have been creating web applications
+          for over 6+ years, I still love it as if it was something new.
+        </p>
+      </div>
+      <button type="button"
+        class="md:mt-4 font-poppins text-white bg-gradient font-medium rounded-lg text-sm px-3 py-2 me-1 bg-blue-600 mb-1">About
+        Me</button>
+      <div>
+        <img src="../src/Images/mouse.png" class="h-7 mt-4 max-sm:mt-2 hidden md:block" alt="mouse icon" />
+      </div>
+    </div>
+  </main>
+
+  <section class="arrow relative">
+    <img src="../src/Images/pngwing.png" class="max-sm:hidden absolute w-[20rem] bottom-[-13rem] z-30"
+      alt="arrow icon" />
+  </section>
+
+  <section class="container mx-auto cards flex justify-between mt-10 md:mt-20 w-full max-sm:flex-col items-center">
+    <div class="max-w-sm bg-white flex flex-col justify-center items-center p-4 h-full">
+      <a href="#">
+        <img class="rounded-t-lg" src="../src/Images/01.png" alt="Pixel Perfect" />
+      </a>
+      <div class="p-5">
+        <a href="#">
+          <h5 class="mb-2 text-xl font-bold text-center font-poppins">Pixel Perfect</h5>
+        </a>
+        <p class="mb-3 font-poppins text-[#9E9E9E] text-[0.9rem] text-center">
+          Crafting designs with exacting precision, ensuring seamless user experiences through meticulous attention to
+          detail and alignment for visually stunning results.
+        </p>
+      </div>
+    </div>
+    <div class="max-w-sm bg-white flex flex-col justify-center items-center p-4 h-full">
+      <a href="#">
+        <img class="rounded-t-lg" src="../src/Images/02.png" alt="High Quality" />
+      </a>
+      <div class="p-5">
+        <a href="#">
+          <h5 class="mb-2 text-xl font-bold text-center font-poppins">High Quality</h5>
+        </a>
+        <p class="mb-3 font-poppins text-[#9E9E9E] text-[0.9rem] text-center">
+          Delivering excellence through top-tier craftsmanship, our solutions prioritize reliability, performance, and
+          user satisfaction, setting the standard for high-quality digital experiences.
+        </p>
+      </div>
+    </div>
+    <div class="max-w-sm bg-white flex flex-col justify-center items-center p-4 h-full">
+      <a href="#">
+        <img class="rounded-t-lg" src="../src/Images/03.png" alt="Awesome Idea" />
+      </a>
+      <div class="p-5">
+        <a href="#">
+          <h5 class="mb-2 text-xl font-bold text-center font-poppins">Awesome Idea</h5>
+        </a>
+        <p class="mb-3 font-poppins text-[#9E9E9E] text-[0.9rem] text-center">
+          Transforming innovative concepts into impactful digital solutions, our approach blends cutting-edge technology
+          with imaginative thinking to create memorable and effective user experiences.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container mx-auto flex md:flex-row justify-evenly flex-col relative mt-20" id="aboutdiv">
+    <!-- Decorative image -->
+    <img src="../src/Images/scar.png" class="absolute md:right-[8rem] md:bottom-72 top-[-5rem] w-[6rem] right-4" />
+    <!-- Developer image -->
+    <img src="../src/Images/Developer 01.png" class="md:w-4/12 mb-5 h-fit" />
+    <div class="flex flex-col ml-10 md:w-4/12">
+      <p class="text-title font-bold whitespace-nowrap text-gradient font-poppins mb-3 md:text-xl2">About Me</p>
+      <p class="font-poppins text-title font-bold mb-5 md:text-xl2">I Provide Wide Range Of Digital Services</p>
+      <p class="font-poppins text-xl1 font-medium md:text-m">
+        My expertise lies in the React ecosystem, including React, Redux, NextJS, and React Native, allowing me to build
+        user-centric experiences across web and mobile platforms. I also possess strong backend skills in NodeJS,
+        MongoDB, and SocketIO, enabling me to handle the complete development cycle.
+      </p>
+    </div>
+  </section>
+
+  <section class="container mx-auto flex md:flex-row flex-col mt-14">
+    <div class="flex md:flex-row flex-col justify-between w-full p-4">
+      <!-- Experience section -->
+      <div class="flex flex-col mb-10 md:mb-0">
+        <p class="font-bold font-poppins text-center md:text-title text-numbers">6+</p>
+        <p class="text-lighttext text-center">Years of experience</p>
+      </div>
+      <!-- Lead project section -->
+      <div class="flex flex-col mb-10 md:mb-0">
+        <p class="font-bold font-poppins text-center md:text-title text-numbers">15+</p>
+        <p class="text-lighttext text-center">Lead Project</p>
+      </div>
+      <!-- Completed project section -->
+      <div class="flex flex-col mb-10 md:mb-0">
+        <p class="font-bold font-poppins text-center md:text-title text-numbers">25+</p>
+        <p class="text-lighttext text-center">Completed Project</p>
+      </div>
+      <!-- Given review section -->
+      <div class="flex flex-col mb-10 md:mb-0">
+        <p class="font-bold font-poppins text-center md:text-title text-numbers">20+</p>
+        <p class="text-lighttext text-center">Given Review</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="relative">
+    <!-- Decorative image -->
+    <img src="../src/Images/scarxp.png"
+      class="absolute md:top-0 md:w-[18rem] md:left-0 md:block transform right-0 top-[-7rem] w-[14rem]" />
+    <div class="container mx-auto w-full flex flex-col mt-28">
+      <!-- Experience summary -->
+      <span class="self-center text-title font-bold whitespace-nowrap text-gradient font-poppins">6+ YEARS XP</span>
+      <p class="text-center font-bold text-title font-poppins mt-4">From Saas to Website & Mobile</p>
+      <p class="text-center text-[1.4rem] font-poppins mt-2 font-[400] md:text-[1.2rem]">I’ve had the opportunity to
+        work across all kinds of product</p>
+    </div>
+  </section>
+
+  <section
+    class="container mx-auto w-full flex md:flex-row flex-col gap-[4rem] justify-center items-center mt-12 mb-28">
+    <!-- Experience card 1 -->
+    <div class="bg-white rounded-lg p-4 w-64 border border-bordercard">
+      <!-- Date Range -->
+      <div class="text-center text-sm text-gray-500 mb-4 text-lighttext">
+        May 2018 - Mar 2019
+      </div>
+
+      <!-- Logo and Company Info -->
+      <div class="flex flex-col items-center mb-4">
+        <div class="w-16 h-16 mb-2">
+          <img src="../src/Images/vy.png" alt="Vytech Enterprise Logo" class="rounded-full" />
+        </div>
+        <div class="text-center text-m font-semibold text-gray-700 mb-1">
+          Web Designer / Developer
+        </div>
+        <div class="text-center text-blue-500 font-semibold text-bluecolor text-[0.9rem] mt-2">VYTECH ENTERPRISE · <span
+            class="font-normal">Full-time</span></div>
+      </div>
+
+      <!-- Location -->
+      <div class="text-center text-m text-lighttext font-500">
+        Ahmedabad, Gujarat, India
+      </div>
+    </div>
+
+    <!-- Experience card 2 -->
+    <div class="bg-white rounded-lg p-4 w-64 border border-bordercard">
+      <!-- Date Range -->
+      <div class="text-center text-sm text-gray-500 mb-4 text-lighttext">
+        Apr 2019 - Dec 2021
+      </div>
+
+      <!-- Logo and Company Info -->
+      <div class="flex flex-col items-center mb-4">
+        <div class="w-16 h-16 mb-2">
+          <img src="../src/Images/upf.png" alt="UpForce Tech Logo" class="rounded-full" />
+        </div>
+        <div class="text-center text-m font-semibold text-gray-700 mb-1">
+          Front End Developer (React.js)
+        </div>
+        <div class="text-center text-blue-500 font-semibold text-bluecolor text-[0.9rem] mt-2">UpForce Tech · <span
+            class="font-normal">Full-time</span></div>
+      </div>
+
+      <!-- Location -->
+      <div class="text-center text-m text-lighttext font-500">
+        Ahmedabad, Gujarat, India
+      </div>
+    </div>
+
+    <!-- Experience card 3 -->
+    <div class="bg-white rounded-lg p-4 w-64 border border-bordercard">
+      <!-- Date Range -->
+      <div class="text-center text-sm text-gray-500 mb-4 text-lighttext">
+        Jan 2022 - Present
+      </div>
+
+      <!-- Logo and Company Info -->
+      <div class="flex flex-col items-center mb-4">
+        <div class="w-16 h-16 mb-2">
+          <img src="../src/Images/freelancer.png" alt="Freelancer Logo" class="rounded-full" />
+        </div>
+        <div class="text-center text-m font-semibold text-gray-700 mb-1">
+          Freelancer Front End Developer
+        </div>
+        <div class="text-center text-blue-500 font-semibold text-bluecolor text-[0.9rem] mt-2">Self Employed · <span
+            class="font-normal">Full-time</span></div>
+      </div>
+
+      <!-- Location -->
+      <div class="text-center text-m text-lighttext font-500">
+        Ahmedabad, Gujarat, India
+      </div>
+    </div>
+  </section>
+
+  <div id="modal-background"
+    class="fixed top-0 left-0 py-20 w-full flex justify-center items-center hidden bg-white z-50">
+    <div id="modal-content"
+      class="bg-white p-6 shadow-2xl md:w-[75vw] md:max-h-[80vh] max-h-[80vh] w-[95vw] rounded-xl px-10 overflow-y-scroll">
+      <div class="w-100 flex justify-between items-center">
+        <span class="self-center md:text-title font-bold whitespace-nowrap text-gradient font-poppins text-[1rem]">Web
+          Development</span>
+        <button id="modal-close" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+          <img src="../src/Images/close.png" />
+        </button>
+      </div>
+      <div class="bg-cover bg-no-repeat w-full md:h-96 h-44 mt-5"
+        style="background-image: url('../src/Images/modal1.png');"></div>
+      <p class="font-poppins text-xl2 font-[500] mt-5">Our Capabilities</p>
+      <p class="font-monts text-m font-medium mt-5">
+        Crafting responsive and dynamic websites tailored to your needs, from engaging landing pages to robust
+        e-commerce platforms. We use the latest technologies and best practices to ensure optimal performance, security,
+        and
+        user experience. Our expertise spans front-end and back-end development, content management systems, and custom
+        web solutions.
+      </p>
+      <div class="w-full flex justify-between gap-3">
+        <div class="bg-cover bg-no-repeat w-[40vw] md:h-96 h-24 mt-5"
+          style="background-image: url('../src/Images/image2a.png');"></div>
+        <div class="bg-cover bg-no-repeat w-[40vw] md:h-96 h-24 mt-5"
+          style="background-image: url('../src/Images/image2a.png');"></div>
+      </div>
+      <p class="font-poppins text-xl2 font-[500] mt-5">Our Approach</p>
+      <p class="font-monts md:text-xl1 text-m font-medium mt-5">We believe in a user-centric design philosophy, ensuring
+        that every website we create is intuitive, accessible, and visually appealing.</p>
+      <div class="text-left">
+        <h2 class="mt-4 text-xl font-bold font-poppins">Our Approach includes</h2>
+        <ul class="list-disc list-inside text-gray-700 mt-2 font-monts">
+          <li><span class="font-semibold">Discovery and Planning:</span> Understanding your business goals, target
+            audience, and technical requirements.</li>
+          <li><span class="font-semibold">Design and Prototyping:</span> Creating wireframes and prototypes to visualize
+            the user journey and interface design.</li>
+          <li><span class="font-semibold">Development and Integration:</span> Building the website using modern
+            frameworks and technologies, integrating third-party services as needed.</li>
+          <li><span class="font-semibold">Testing and Optimization:</span> Conducting thorough testing to ensure
+            cross-browser compatibility, responsiveness, and performance optimization.</li>
+          <li><span class="font-semibold">Launch and Support:</span> Deploying the website and providing ongoing
+            maintenance and support to keep it up-to-date and secure.</li>
+        </ul>
+      </div>
+      <div class="text-left">
+        <h2 class="mt-4 text-xl font-bold font-poppins">Our Work Process</h2>
+        <ol class="list-decimal list-inside text-gray-700 mt-2 font-monts">
+          <li><span class="font-semibold">Initial Consultation:</span> We start with a detailed consultation to
+            understand your specific needs and objectives.</li>
+          <li><span class="font-semibold">Project Proposal:</span> Based on our consultation, we provide a comprehensive
+            project proposal outlining the scope, timeline, and cost.</li>
+          <li><span class="font-semibold">Design Phase:</span> We create detailed wireframes and mockups for your review
+            and approval</li>
+          <li><span class="font-semibold">Development Phase:</span> Our developers bring the design to life, ensuring
+            that all functionalities are implemented correctly.</li>
+          <li><span class="font-semibold">Quality Assurance:</span> We perform rigorous testing to identify and fix any
+            issues before the site goes live.</li>
+          <li><span class="font-semibold">Deployment:</span> We handle the deployment process, ensuring a smooth
+            transition to the live environment.</li>
+          <li><span class="font-semibold">Post-Launch Support:</span>We offer continuous support and maintenance to
+            ensure your website remains secure and up-to-date.</li>
+        </ol>
+      </div>
+      <p class="font-poppins text-xl2 font-[500] mt-5">Related Services</p>
+      <div class="w-full flex gap-5 md:justify-center overflow-scroll md:overflow-visible mt-5 px-2 py-2">
+        <div
+          class="max-w-sm bg-white rounded-2xl md:max-w-[18rem] md:min-w-[18rem] min-w-[90vw] px-10 pb-5 hover:border-l-[3px] hover:border-t-[3px] hover:border-textbluecolor transition duration-300 hover:transition hover:duration-300">
+          <img src="../src/Images/img2.png" class="w-[7rem] md:block" />
+          <h2 class="text-2xl font-semibold mb-2 text-xl2 font-poppins">Mobile App Development</h2>
+          <p class="text-gray-600 text-lighttext text-[0.8rem] font-poppins">
+            Designing and developing intuitive and feature-rich mobile applications for iOS and Android platforms,
+            leveraging native or hybrid frameworks to create seamless experiences that engage and delight users on the
+            go.
+          </p>
+          <div class="flex flex-row gap-1 items-center mt-1">
+            <div class="p-1 bg-textbluecolor w-[0.5rem] h-[0.5rem]"></div>
+            <span href="#"
+              class="inline-block px-4 py-2 text-textbluecolor font-poppins text-left font-semibold rounded-md cursor-pointer">
+              Read More
+            </span>
+          </div>
+        </div>
+        <div
+          class="max-w-sm bg-white rounded-2xl md:max-w-[18rem] md:min-w-[18rem] min-w-[90vw] px-10 pb-5 hover:border-l-[3px] hover:border-t-[3px] hover:border-textbluecolor transition duration-300 hover:transition hover:duration-300">
+          <img src="../src/Images/img3.png" class="w-[7rem] md:block" />
+          <h2 class="text-2xl font-semibold mb-2 text-xl2 font-poppins">UI/UX Design</h2>
+          <p class="text-gray-600 text-lighttext text-[0.8rem] font-poppins">
+            Creating visually appealing and user-friendly interfaces that enhance usability and engagement, focusing on
+            intuitive navigation, interactive elements, and aesthetically pleasing design to deliver exceptional
+            user experiences.
+          </p>
+          <div class="flex flex-row gap-1 items-center mt-1">
+            <div class="p-1 bg-textbluecolor w-[0.5rem] h-[0.5rem]"></div>
+            <span href="#"
+              class="inline-block px-4 py-2 text-textbluecolor font-poppins text-left font-semibold rounded-md cursor-pointer">
+              Read More
+            </span>
+          </div>
+        </div>
+        <div
+          class="max-w-sm bg-white rounded-2xl md:max-w-[18rem] md:min-w-[18rem] min-w-[90vw] px-10 pb-5 hover:border-l-[3px] hover:border-t-[3px] hover:border-textbluecolor transition duration-300 hover:transition hover:duration-300">
+          <img src="../src/Images/img4.png" class="w-[7rem] md:block" />
+          <h2 class="text-2xl font-semibold mb-2 text-xl2 font-poppins">Software Development</h2>
+          <p class="text-gray-600 text-lighttext text-[0.8rem] font-poppins">
+            Building custom software solutions tailored to your business requirements, from enterprise applications to
+            specialized tools, using scalable architectures and best practices to ensure reliability, efficiency, and
+            scalability.
+          </p>
+          <div class="flex flex-row gap-1 items-center mt-1">
+            <div class="p-1 bg-textbluecolor w-[0.5rem] h-[0.5rem]"></div>
+            <span href="#"
+              class="inline-block px-4 py-2 text-textbluecolor font-poppins text-left font-semibold rounded-md cursor-pointer">
+              Read More
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="flex md:justify-center justify-start mt-4">
+        <button type="submit"
+          class="gradient-btn text-white px-4 py-2 rounded-md shadow-md focus:outline-none transition duration-300 font-monts">Contact
+          Now</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-full flex flex-col mt-28 px-7 md:px-0 relative" id="servicesdiv">
+    <img src="../src/Images/circle.png"
+      class="absolute md:bottom-[7rem] md:w-[7rem] right-0 md:block bottom-[13rem] w-[5rem]" />
+    <span class="self-center text-title font-bold whitespace-nowrap text-gradient font-poppins">Services</span>
+    <p class="text-center font-bold text-title font-poppins mt-4">I Provide Wide Range Of Digital Services</p>
+    <p class="text-center md:text-[1.2rem] text-[1rem] font-poppins mt-2 font-[400] px-[0rem] md:px-[24rem]">
+      Promote your blog posts, case udie, and product ouncems with the the branded videoscustomers coming back for
+      services Makes best effort.
+    </p>
+  </div>
+
+  <div
+    class="container mx-auto flex w-full justify-center gap-5 mt-10 md:flex-row flex-col md:items-start items-center">
+    <div
+      class="max-w-sm bg-white rounded-2xl md:w-[16rem] w-[80vw] px-10 pb-5 hover:border-l-[3px] hover:border-t-[3px] hover:border-textbluecolor transition duration-300 hover:transition hover:duration-300">
+      <img src="../src/Images/img1.png" class="w-[4rem] md:block" />
+      <h2 class="text-2xl font-semibold mb-2 text-xl2 font-poppins">Web Development</h2>
+      <p class="text-gray-600 text-lighttext text-[0.8rem] font-poppins">
+        Crafting responsive and dynamic websites tailored to your needs, from engaging landing pages to robust
+        e-commerce platforms, using the latest technologies to ensure optimal performance and user experience.
+      </p>
+      <div id="modal-trigger1" class="flex flex-row gap-1 items-center mt-1">
+        <div class="p-1 bg-textbluecolor w-[0.5rem] h-[0.5rem]"></div>
+        <span href="#"
+          class="inline-block px-4 py-2 text-textbluecolor font-poppins text-left font-semibold rounded-md cursor-pointer">
+          Read More</span>
+      </div>
+    </div>
+    <div
+      class="max-w-sm bg-white rounded-2xl md:w-[16rem] w-[80vw] px-10 pb-5 hover:border-l-[3px] hover:border-t-[3px] hover:border-textbluecolor transition duration-300 hover:transition hover:duration-300">
+      <img src="../src/Images/img2.png" class="w-[4rem] md:block" />
+      <h2 class="text-2xl font-semibold mb-2 text-xl2 font-poppins">Mobile App Development</h2>
+      <p class="text-gray-600 text-lighttext text-[0.8rem] font-poppins">
+        Designing and developing intuitive and feature-rich mobile applications for iOS and Android platforms,
+        leveraging native or hybrid frameworks to create seamless experiences that engage and delight users on the go.
+      </p>
+      <div id="modal-trigger2" class="flex flex-row gap-1 items-center mt-1">
+        <div class="p-1 bg-textbluecolor w-[0.5rem] h-[0.5rem]"></div>
+        <span href="#"
+          class="inline-block px-4 py-2 text-textbluecolor font-poppins text-left font-semibold rounded-md cursor-pointer">
+          Read More</span>
+      </div>
+    </div>
+    <div
+      class="max-w-sm bg-white rounded-2xl xl:min-w-[18em] w-[80vw] px-10 pb-5 hover:border-l-[3px] hover:border-t-[3px] hover:border-textbluecolor transition duration-300 hover:transition hover:duration-300">
+      <img src="../src/Images/img3.png" class="w-[4rem] md:block" />
+      <h2 class="text-2xl font-semibold mb-2 text-xl2 font-poppins">UI/UX Design</h2>
+      <p class="text-gray-600 text-lighttext text-[0.85rem] font-poppins">
+        Creating visually appealing and user-friendly interfaces that enhance usability and engagement, focusing on
+        intuitive navigation, interactive elements, and aesthetically pleasing design to deliver exceptional user
+        experiences.
+      </p>
+      <div id="modal-trigger3" class="flex flex-row gap-1 items-center mt-1">
+        <div class="p-1 bg-textbluecolor w-[0.5rem] h-[0.5rem]"></div>
+        <span href="#"
+          class="inline-block px-4 py-2 text-textbluecolor font-poppins text-left font-semibold rounded-md cursor-pointer">
+          Read More</span>
+      </div>
+    </div>
+    <div
+      class="max-w-sm bg-white rounded-2xl md:w-[16rem] w-[80vw] px-10 pb-5 hover:border-l-[3px] hover:border-t-[3px] hover:border-textbluecolor transition duration-300 hover:transition hover:duration-300">
+      <img src="../src/Images/img4.png" class="w-[4rem] md:block" />
+      <h2 class="text-2xl font-semibold mb-2 text-xl2 font-poppins">Software Development</h2>
+      <p class="text-gray-600 text-lighttext text-[0.8rem] font-poppins">
+        Building custom software solutions tailored to your business requirements, from enterprise applications to
+        specialized tools, using scalable architectures and best practices to ensure reliability, efficiency, and
+        scalability.
+      </p>
+      <div id="modal-trigger4" class="flex flex-row gap-1 items-center mt-1">
+        <div class="p-1 bg-textbluecolor w-[0.5rem] h-[0.5rem]"></div>
+        <span href="#"
+          class="inline-block px-4 py-2 text-textbluecolor font-poppins text-left font-semibold rounded-md cursor-pointer">
+          Read More</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-full flex flex-col mt-40 px-7 md:px-0 relative">
+    <img src="../src/Images/skills.png"
+      class="absolute w-[15rem] md:top-[-8rem] top-[-12rem] md:left-0 md:block md right-0 md:transform md:-scale-x-100" />
+    <span class="self-center text-title font-bold whitespace-nowrap text-gradient font-poppins">Skills</span>
+    <p class="text-center md:text-[1.2rem] text-[1rem] font-poppins mt-2 font-[400]">The skills, tools and technologies
+      I am really good at:</p>
+  </div>
+
+  <div class="flex w-full justify-center">
+    <div class="grid grid-cols-3 md:gap-10 gap-4 md:grid-cols-8 md:p-0 p-10 mt-6 max-w-screen-lg">
+      <img src="../src/Images/javascript1.png" alt="JavaScript" class="w-full h-auto" />
+      <img src="../src/Images/typescript1png.png" alt="TypeScript" class="w-full h-auto" />
+      <img src="../src/Images/reactjs.png" alt="ReactJS" class="w-full h-auto" />
+      <img src="../src/Images/next.png" alt="Next.js" class="w-full h-auto" />
+      <img src="../src/Images/Tech.png" alt="Tech" class="w-full h-auto" />
+      <img src="../src/Images/express.png" alt="Express" class="w-full h-auto" />
+      <img src="../src/Images/Nest.png" alt="Nest" class="w-full h-auto" />
+      <img src="../src/Images/socketio.png" alt="Socket.io" class="w-full h-auto" />
+      <img src="../src/Images/postgre.png" alt="PostgreSQL" class="w-full h-auto" />
+      <img src="../src/Images/mongodb.png" alt="MongoDB" class="w-full h-auto" />
+      <img src="../src/Images/saas.png" alt="SaaS" class="w-full h-auto" />
+      <img src="../src/Images/tailwindcss.png" alt="TailwindCSS" class="w-full h-auto" />
+      <img src="../src/Images/figma.png" alt="Figma" class="w-full h-auto" />
+      <img src="../src/Images/cypress.png" alt="Cypress" class="w-full h-auto" />
+      <img src="../src/Images/storybook.png" alt="Storybook" class="w-full h-auto" />
+      <img src="../src/Images/git.png" alt="Git" class="w-full h-auto" />
+    </div>
+  </div>
+
+  <div id="modal-background2"
+    class="fixed top-0 left-0 py-20 w-full flex justify-center items-center hidden bg-white z-50">
+    <div id="modal-content2"
+      class="bg-white p-6 shadow-2xl md:w-[75vw] md:max-h-[80vh] max-h-[80vh] w-[95vw] rounded-xl px-10 overflow-y-scroll">
+      <div class="w-100 flex justify-between items-center">
+        <span class="self-center md:text-title font-bold whitespace-nowrap text-gradient font-poppins text-[1rem]">My
+          Amazing Works</span>
+        <button id="modal-close2" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+          <img src="../src/Images/close.png" />
+        </button>
+      </div>
+      <p class="text-lighttext font-monts">Web Design</p>
+      <p class="font-poppins text-xl2 font-[500] mt-5">Our Capabilities</p>
+      <div class="w-full flex md:flex-row flex-col">
+        <div class="w-[45vw] flex flex-col md:pb-5 pt-5 pb-0 gap-5">
+          <p class="font-monts"><span class="font-medium font-poppins">Project Type: </span>Web Design</p>
+          <p class="font-monts"><span class="font-medium font-poppins">Client: </span>Juwel Khan</p>
+          <p class="font-monts"><span class="font-medium font-poppins">Duration: </span>2 Weeks</p>
+        </div>
+        <div class="w-[45vw] flex flex-col pb-5 pt-5 gap-5">
+          <p class="font-monts"><span class="font-medium font-poppins">Tasks: </span>Frontend Development</p>
+          <p class="font-monts"><span class="font-medium font-poppins">Budget: </span>$2000</p>
+          <p class="font-monts"><span class="font-medium font-poppins">Live Website: </span>www.google.com</p>
+        </div>
+      </div>
+      <div class="bg-cover bg-no-repeat w-full md:h-96 h-44 mt-5"
+        style="background-image: url('../src/Images/modal1.png');"></div>
+      <p class="font-poppins text-xl2 font-[500] mt-5">Our Strategies</p>
+      <p class="font-monts text-m font-medium mt-3">
+        Our strategy for this project focused on understanding the client's vision and delivering a cohesive design that
+        resonated with their target audience. We prioritized a user-centric design approach, ensuring that the
+        interface was not only visually appealing but also intuitive and easy to navigate. We employed modern design
+        tools and technologies to create a responsive and engaging user experience.
+      </p>
+      <div class="w-full flex md:flex-row flex-col">
+        <div class="w-[45vw] flex py-5 gap-x-2 gap-y-2 flex-wrap" style="align-content: flex-start;">
+          <div class="bg-[#FFEEE7] text-[#DE4E10] px-[10px] py-[5px] h-fit w-fit">Infinite scroll</div>
+          <div class="bg-[#FFEEE7] text-[#DE4E10] px-[10px] py-[5px] h-fit w-fit">Virtualization</div>
+          <div class="bg-[#FFEEE7] text-[#DE4E10] px-[10px] py-[5px] h-fit w-fit">Complex forms</div>
+          <div class="bg-[#FFEEE7] text-[#DE4E10] px-[10px] py-[5px] h-fit w-fit">Drag & Drop</div>
+          <div class="bg-[#FFEEE7] text-[#DE4E10] px-[10px] py-[5px] h-fit w-fit">Product tour</div>
+          <div class="bg-[#FFEEE7] text-[#DE4E10] px-[10px] py-[5px] h-fit w-fit">Chat</div>
+          <div class="bg-[#FFEEE7] text-[#DE4E10] px-[10px] py-[5px] h-fit w-fit">Real-time updates</div>
+          <div class="bg-[#FFEEE7] text-[#DE4E10] px-[10px] py-[5px] h-fit w-fit">Zoom integration</div>
+          <div class="bg-[#FFEEE7] text-[#DE4E10] px-[10px] py-[5px] h-fit w-fit">Video player</div>
+          <div class="bg-[#FFEEE7] text-[#DE4E10] px-[10px] py-[5px] h-fit w-fit">Rich-text editor</div>
+          <div class="bg-[#FFEEE7] text-[#DE4E10] px-[10px] py-[5px] h-fit w-fit">Payment wall</div>
+          <div class="bg-[#FFEEE7] text-[#DE4E10] px-[10px] py-[5px] h-fit w-fit">Responsiveness</div>
+          <div class="bg-[#FFEEE7] text-[#DE4E10] px-[10px] py-[5px] h-fit w-fit">Multi-language support</div>
+          <div class="bg-[#FFEEE7] text-[#DE4E10] px-[10px] py-[5px] h-fit w-fit">Modular codebase</div>
+        </div>
+
+        <div class="w-[45vw] flex py-5 gap-x-2 gap-y-2 flex-wrap" style="align-content: flex-start;">
+          <div class="bg-[#EAF7FF] text-[#1DA1F3] px-[10px] py-[5px] h-fit w-fit">Infinite scroll</div>
+          <div class="bg-[#EAF7FF] text-[#1DA1F3] px-[10px] py-[5px] h-fit w-fit">Virtualization</div>
+          <div class="bg-[#EAF7FF] text-[#1DA1F3] px-[10px] py-[5px] h-fit w-fit">Complex forms</div>
+          <div class="bg-[#EAF7FF] text-[#1DA1F3] px-[10px] py-[5px] h-fit w-fit">Drag & Drop</div>
+          <div class="bg-[#EAF7FF] text-[#1DA1F3] px-[10px] py-[5px] h-fit w-fit">Product tour</div>
+          <div class="bg-[#EAF7FF] text-[#1DA1F3] px-[10px] py-[5px] h-fit w-fit">Chat</div>
+          <div class="bg-[#EAF7FF] text-[#1DA1F3] px-[10px] py-[5px] h-fit w-fit">Real-time updates</div>
+          <div class="bg-[#EAF7FF] text-[#1DA1F3] px-[10px] py-[5px] h-fit w-fit">Zoom integration</div>
+          <div class="bg-[#EAF7FF] text-[#1DA1F3] px-[10px] py-[5px] h-fit w-fit">Video player</div>
+          <div class="bg-[#EAF7FF] text-[#1DA1F3] px-[10px] py-[5px] h-fit w-fit">Rich-text editor</div>
+          <div class="bg-[#EAF7FF] text-[#1DA1F3] px-[10px] py-[5px] h-fit w-fit">Payment wall</div>
+          <div class="bg-[#EAF7FF] text-[#1DA1F3] px-[10px] py-[5px] h-fit w-fit">Responsiveness</div>
+          <div class="bg-[#EAF7FF] text-[#1DA1F3] px-[10px] py-[5px] h-fit w-fit">Multi-language support</div>
+          <div class="bg-[#EAF7FF] text-[#1DA1F3] px-[10px] py-[5px] h-fit w-fit">Modular codebase</div>
+        </div>
+      </div>
+      <div class="text-left">
+        <p class="font-poppins text-xl2 font-[500] mt-5">Our Aproach</p>
+        <ol class="list-decimal text-gray-700 mt-3 font-monts">
+          <li><span class="font-semibold">Discovery Phase:</span> Conducted in-depth discussions with the client to
+            gather requirements and understand their goals.</li>
+          <li><span class="font-semibold">Design Phase:</span> Created wireframes and high-fidelity prototypes to
+            visualize the user interface.</li>
+          <li><span class="font-semibold">Development Phase:</span> Implemented the design using modern frontend
+            technologies, ensuring responsiveness and compatibility across devices.</li>
+          <li><span class="font-semibold">Testing Phase:</span> Conducted thorough testing to identify and resolve any
+            issues, ensuring a smooth user experience.</li>
+          <li><span class="font-semibold">Feedback and Iteration:</span> Incorporated client feedback throughout the
+            process to refine and perfect the final product.</li>
+        </ol>
+      </div>
+      <p class="font-poppins text-xl2 font-[500] mt-5">Achieved Goals</p>
+      <ul class="list-disc text-gray-700 mt-3 font-monts">
+        <li><span class="font-semibold">UI/UX Design:</span> Developed a visually appealing and user-friendly UI/UX
+          design.</li>
+        <li><span class="font-semibold">Responsive Frontend:</span> Delivered a fully responsive frontend that works
+          seamlessly across all devices.</li>
+        <li><span class="font-semibold">On-Time Delivery:</span> Met the project deadline and stayed within the
+          allocated budget.</li>
+        <li><span class="font-semibold">Digital Presence Enhancement:</span> Enhanced the client's digital presence with
+          a modern and engaging design.</li>
+      </ul>
+      <p class="font-poppins text-xl2 font-[500] mt-5">Results</p>
+      <p class="font-monts text-m font-medium mt-3">
+        The project resulted in a high-quality graphic design that effectively represented the client's brand. The
+        responsive design and user-friendly interface received positive feedback from the client and their users. The
+        project helped Juwel Khan attract more visitors to their site and provided an improved user experience,
+        contributing to higher engagement and satisfaction.
+      </p>
+      <p class="font-poppins text-xl2 font-[500] mt-5">Related Projects</p>
+      <div class="w-full overflow-scroll px-5 pt-5 md:flex-row flex mt-3 md:justify-evenly">
+        <div class="flex flex-col">
+          <img src="../src/Images/modal1.png" class="rounded-2xl w-[21rem] max-sm:mt-3 p-2" alt="" srcset="" />
+          <div class="pl-4 box-border">
+            <p class="font-poppins font-[500]">My Amazing Project</p>
+            <p class="font-monts text-[0.8rem] text-lighttext font-[500]">App Design</p>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <img src="../src/Images/modal1.png" class="rounded-2xl w-[21rem] max-sm:mt-3 p-2" alt="" srcset="" />
+          <div class="pl-4 box-border">
+            <p class="font-poppins font-[500]">My Amazing Project</p>
+            <p class="font-monts text-[0.8rem] text-lighttext font-[500]">App Design</p>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <img src="../src/Images/modal1.png" class="rounded-2xl w-[21rem] max-sm:mt-3 p-2" alt="" srcset="" />
+          <div class="pl-4 box-border">
+            <p class="font-poppins font-[500]">My Amazing Project</p>
+            <p class="font-monts text-[0.8rem] text-lighttext font-[500]">App Design</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex md:justify-center justify-start mt-4">
+        <button type="submit"
+          class="gradient-btn text-white px-4 py-2 rounded-md shadow-md focus:outline-none transition duration-300 font-monts">Contact
+          Now</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio relative" id="portfoliodiv">
+    <img src="../src/Images/traced.png" alt="" srcset="" class="absolute right-0 md:top-0 top-[-2rem]" />
+    <div class="w-full flex justify-center">
+      <span class="text-center text-title font-bold whitespace-nowrap text-gradient font-poppins mt-36">Portfolio</span>
+    </div>
+    <p class="text-center font-bold text-title font-poppins mt-4">My Amazing Works</p>
+    <div class="w-full flex justify-center">
+      <div
+        class="buttons flex mt-3 gap-3 md:w-full whitespace-nowrap md:overflow-visible overflow-scroll w-[90vw] md:justify-center">
+        <div class="p-[0.1rem] h-min bg-gradient rounded-[0.6rem]">
+          <button type="button"
+            class="bg-white font-poppins font-medium rounded-lg px-5 py-2.5 m-0 hover:bg-transparent hover:text-white">
+            All
+          </button>
+        </div>
+        <div class="p-[0.1rem] h-min bg-gradient rounded-[0.6rem]">
+          <button type="button"
+            class="bg-white font-poppins font-medium rounded-lg px-5 py-2.5 m-0 hover:bg-transparent hover:text-white">
+            Web Design
+          </button>
+        </div>
+        <div class="p-[0.1rem] h-min bg-gradient rounded-[0.6rem]">
+          <button type="button"
+            class="bg-white font-poppins font-medium rounded-lg px-5 py-2.5 m-0 hover:bg-transparent hover:text-white">
+            App Design
+          </button>
+        </div>
+        <div class="p-[0.1rem] h-min bg-gradient rounded-[0.6rem]">
+          <button type="button"
+            class="bg-white font-poppins font-medium rounded-lg px-5 py-2.5 m-0 hover:bg-transparent hover:text-white">
+            Product
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="cards px-5 pt-5 flex mt-3 justify-evenly md:justify-center gap-5 max-sm:flex-col items-center">
+      <div class="flex flex-col" id="modal-triggera">
+        <img src="../src/Images/modal1.png" class="rounded-2xl w-[21rem] max-sm:mt-3 p-2" alt="" srcset="" />
+        <div class="pl-4 box-border">
+          <p class="font-poppins font-[500]">My Amazing Project</p>
+          <p class="font-monts text-[0.8rem] text-lighttext font-[500]">App Design</p>
+        </div>
+      </div>
+      <div class="flex flex-col" id="modal-triggerb">
+        <img src="../src/Images/project2.png" class="rounded-2xl w-[21rem] max-sm:mt-3 p-2" alt="" srcset="" />
+        <div class="pl-4 box-border">
+          <p class="font-poppins font-[500]">My Amazing Project</p>
+          <p class="font-monts text-[0.8rem] text-lighttext font-[500]">App Design</p>
+        </div>
+      </div>
+      <div class="flex flex-col" id="modal-triggerc">
+        <img src="../src/Images/project3.png" class="rounded-2xl w-[21rem] max-sm:mt-3 p-2" alt="" srcset="" />
+        <div class="pl-4 box-border">
+          <p class="font-poppins font-[500]">My Amazing Project</p>
+          <p class="font-monts text-[0.8rem] text-lighttext font-[500]">App Design</p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="cards2 px-5 pt-5 md:mt-4 mt-0 p-5 flex justify-evenly md:justify-center gap-5 max-sm:flex-col items-center">
+      <div class="flex flex-col" id="modal-triggerd">
+        <img src="../src/Images/project4.png" class="rounded-2xl w-[21rem] max-sm:mt-3 p-2" alt="" srcset="" />
+        <div class="pl-4 box-border">
+          <p class="font-poppins font-[500]">My Amazing Project</p>
+          <p class="font-monts text-[0.8rem] text-lighttext font-[500]">App Design</p>
+        </div>
+      </div>
+      <div class="flex flex-col">
+        <img src="../src/Images/project5.png" class="rounded-2xl w-[21rem] max-sm:mt-3 p-2" alt="" srcset=""
+          id="modal-triggere" />
+        <div class="pl-4 box-border">
+          <p class="font-poppins font-[500]">My Amazing Project</p>
+          <p class="font-monts text-[0.8rem] text-lighttext font-[500]">App Design</p>
+        </div>
+      </div>
+      <div class="flex flex-col">
+        <img src="../src/Images/project6.png" class="rounded-2xl w-[21rem] max-sm:mt-3 p-2" alt="" srcset=""
+          id="modal-triggerf" />
+        <div class="pl-4 box-border">
+          <p class="font-poppins font-[500]">My Amazing Project</p>
+          <p class="font-monts text-[0.8rem] text-lighttext font-[500]">App Design</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-full flex flex-col mt-40 px-7 md:px-0 relative">
+    <img src="../src/Images/contact.png"
+      class="absolute w-[15rem] md:top-[-8rem] top-[-10rem] md:left-12 md:block md right-2 md:-scale-x-[0deg] md:rotate-0 rotate-[30deg]" />
+    <span class="self-center text-title font-bold whitespace-nowrap text-gradient font-poppins">Testimonial</span>
+    <p class="text-center md:text-[1.1rem] text-[1rem] font-poppins mt-2 font-[400]">We provide all the advantage that
+      can simplify all your financial and banking support without any further issues</p>
+  </div>
+
+  <div class="container mx-auto swiper mt-7">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper pb-2">
+      <!-- Slides -->
+      <div class="bg-[#FAFAFA] p-4 rounded-xl swiper-slide h-5">
+        <p class="text-gray-700 mb-4 font-monts text-m text-gray">
+          Working with Akash Bambhaniya has been a game-changer for our company. His attention to detail and commitment
+          to delivering high-quality solutions exceeded our expectations. The new website is not only visually
+          stunning but also highly functional. We couldn't be happier with the results.
+        </p>
+        <div class="flex items-center">
+          <img src="../src/Images/Avatar1.png" alt="John Smith" class="w-12 h-12 rounded-full mr-4" />
+          <div>
+            <p class="text-gray-900 font-poppins font-[500]">John Smith</p>
+            <p class="text-blue-500 text-[0.8rem] font-monts font-[500] text-textbluecolor">CEO at Tech Innovators</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-[#FAFAFA] p-4 rounded-xl w-full swiper-slide">
+        <p class="text-gray-700 mb-4 font-monts text-m text-gray">
+          Akash Bambhaniya brought our vision to life with his innovative approach and technical expertise. The mobile
+          app he developed is user-friendly and packed with features that our users love. His professionalism and
+          dedication throughout the project were outstanding.
+        </p>
+        <div class="flex items-center">
+          <img src="../src/Images/Avatar2.png" alt="John Smith" class="w-12 h-12 rounded-full mr-4" />
+          <div>
+            <p class="text-gray-900 font-poppins font-[500]">Emily Davis</p>
+            <p class="text-blue-500 text-[0.8rem] font-monts font-[500] text-textbluecolor">Product Manager at Creative
+              Solutions</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-[#FAFAFA] p-4 rounded-xl w-full swiper-slide">
+        <p class="text-gray-700 mb-4 font-monts text-m text-gray">
+          The custom software solution provided by Akash Bambhaniya has streamlined our operations and improved our
+          efficiency. His ability to understand our requirements and deliver a robust and scalable product was
+          impressive. We highly recommend his services.
+        </p>
+        <div class="flex items-center">
+          <img src="../src/Images/Avatar3.png" alt="John Smith" class="w-12 h-12 rounded-full mr-4" />
+          <div>
+            <p class="text-gray-900 font-poppins font-[500]">Michael Brown</p>
+            <p class="text-blue-500 text-[0.8rem] font-monts font-[500] text-textbluecolor">CTO at Digital Ventures</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-full flex justify-center gap-5 mt-5">
+      <div class="swiper-button-prev-custom swiper-button-custom w-fit">
+        <div class="bg-white py-3 px-[0.65rem] rounded-full hover:bg-transparent hover:text-white">
+          <img src="../src/Images/arrow-left.png" class="w-3 hover:hover-invert" />
+        </div>
+      </div>
+      <div class="swiper-button-next-custom swiper-button-custom w-fit">
+        <div class="bg-white py-3 px-[0.65rem] rounded-full hover:bg-transparent hover:text-white">
+          <img src="../src/Images/arrow-left.png" class="w-3 transform rotate-180 hover:hover-invert" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="yellow-line relative w-full">
+    <img src="../src/Images/yellow line.png" class="absolute right-0 h-40 top-10" alt="" srcset="" />
+  </div>
+
+  <div class="w-full flex flex-col mt-40 px-7 md:px-0 relative">
+    <span class="self-center text-title font-bold whitespace-nowrap text-gradient font-poppins" id="contactdiv">Get in
+      touch</span>
+    <p class="text-center md:text-[1.2rem] text-[1rem] font-poppins mt-2 font-[400]">Let’s build something awesome.</p>
+  </div>
+
+  <div class="md:w-full w-[90vw] md:max-w-3xl bg-[#FAFAFA] rounded-lg p-6 lg:p-10 mx-auto mt-10">
+    <div class="flex justify-between items-center mb-6">
+      <div class="flex items-center space-x-2">
+        <div class="w-3 h-3 bg-[#FF6057] rounded-full"></div>
+        <div class="w-3 h-3 bg-[#fdbc2e] rounded-full"></div>
+        <div class="w-3 h-3 bg-[#27C840] rounded-full"></div>
+      </div>
+      <h2 class="text-lg text-center font-monts font-semibold">New Message</h2>
+      <span></span>
+    </div>
+    <form action="#" class="space-y-4">
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700 font-monts">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email"
+          class="mt-1 block w-full px-3 py-2 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-opacity-50 focus:ring-blue-300" />
+      </div>
+      <div>
+        <label for="name" class="block text-sm font-medium text-gray-700 font-monts">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name"
+          class="mt-1 block w-full px-3 py-2 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-opacity-50 focus:ring-blue-300" />
+      </div>
+      <div>
+        <label for="subject" class="block text-sm font-medium text-gray-700 font-monts">Subject</label>
+        <input type="text" id="subject" name="subject" placeholder="Enter subject"
+          class="mt-1 block w-full px-3 py-2 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-opacity-50 focus:ring-blue-300" />
+      </div>
+      <div>
+        <label for="message" class="block text-sm font-medium text-gray-700 font-monts">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Enter your message"
+          class="mt-1 block w-full px-3 py-2 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-opacity-50 focus:ring-blue-300 bg-[#F5F5F5]"></textarea>
+      </div>
+      <div class="flex md:justify-end justify-start mt-4">
+        <button type="submit"
+          class="gradient-btn text-white px-4 py-2 rounded-md shadow-md focus:outline-none transition duration-300 font-monts">Send
+          Message</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="mt-6 flex justify-center space-x-4 relative">
+    <img src="../src/Images/feather.png" class="absolute w-32 bottom-[-2rem] left-52 hidden md:block" />
+    <button class="p-2 hover:bg-[#F5F5F5] transition duration-200">
+      <img src="../src/Images/cv.png" alt="Icon" class="w-6 h-6" />
+    </button>
+    <button class="p-2 bg-gray-100 hover:bg-gray-200 transition duration-200 hover:bg-[#F5F5F5]">
+      <img src="../src/Images/linked.png" alt="Icon" class="w-6 h-6" />
+    </button>
+    <button class="p-2 bg-gray-100 hover:bg-gray-200 transition duration-200 hover:bg-[#F5F5F5]">
+      <img src="../src/Images/github.png" alt="Icon" class="w-6 h-6" />
+    </button>
+    <button class="p-2 bg-gray-100 hover:bg-gray-200 transition duration-200 hover:bg-[#F5F5F5]">
+      <img src="../src/Images/x.png" alt="Icon" class="w-6 h-6" />
+    </button>
+    <button class="p-2 bg-gray-100 hover:bg-gray-200 transition duration-200 hover:bg-[#F5F5F5]">
+      <img src="../src/Images/discord.png" alt="Icon" class="w-6 h-6" />
+    </button>
+  </div>
+
+  <footer class="py-16 flex flex-col items-center">
+    <span class="self-center text-title font-semibold whitespace-nowrap text-gradient font-audiowide">akash</span>
+    <div class="flex md:flex-row flex-col text-center md:gap-[5rem] gap-[2rem] justify-center md:mt-0 mt-10">
+      <li>
+        <a href="#homediv" class="font-poppins hover:text-gradient">Home</a>
+      </li>
+      <li>
+        <a href="#aboutdiv" class="font-poppins hover:text-gradient">About
+          Us</a>
+      </li>
+      <li>
+        <a href="#servicesdiv" class="font-poppins hover:text-gradient">Services</a>
+      </li>
+      <li>
+        <a href="#" class="font-poppins hover:text-gradient">Portfolio</a>
+      </li>
+      <li>
+        <a href="#contactdiv" class="font-poppins hover:text-gradient">Contact
+          Us</a>
+      </li>
+    </div>
+    <p class="font-monts text-lighttext mt-10 font-[500]">© akashbambhaniya 2024, All rights reserved.</p>
+  </footer>
+
+
+  <script>
+    const swiper = new Swiper(".swiper", {
+      // Horizontal direction
+      direction: "horizontal",
+
+      // Infinite loop
+      loop: false,
+
+      // Number of slides visible at once
+      slidesPerView: 1,
+
+      // Center the current slide
+      centeredSlides: true,
+
+      // Space between slides
+      spaceBetween: 35,
+      initialSlide: 1,
+
+      // Navigation arrows
+      navigation: {
+        nextEl: ".swiper-button-next-custom",
+        prevEl: ".swiper-button-prev-custom",
+      },
+
+      // Scrollbar
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        draggable: true,
+      },
+
+      breakpoints: {
+        // when window width is <= 768px
+        768: {
+          slidesPerView: 3,
+        },
+      },
+    });
+
+    function updateActiveSlideBackground() {
+      // Remove active class from all slides
+      document.querySelectorAll(".swiper-slide").forEach((slide) => {
+        slide.classList.remove("swiper-slide-active");
+      });
+
+      // Add active class to the current active slide
+      const activeSlide = document.querySelector(".swiper-slide-active");
+      if (activeSlide) {
+        activeSlide.classList.add("swiper-slide-active");
+      }
+    }
+
+    // Listen for the slide change event
+    swiper.on("slideChange", () => {
+      updateActiveSlideBackground();
+    });
+
+    // Initial call to set the background color
+    updateActiveSlideBackground();
+  </script>
+
+  <script>
+    // Get the modal and background elements
+    const modalBackground = document.getElementById("modal-background");
+    const modalContent = document.getElementById("modal-content");
+    const modalTrigger1 = document.getElementById("modal-trigger1");
+    const modalTrigger2 = document.getElementById("modal-trigger2");
+    const modalTrigger3 = document.getElementById("modal-trigger3");
+    const modalTrigger4 = document.getElementById("modal-trigger4");
+    const modalCloseBtn = document.getElementById("modal-close");
+
+    // Function to open the modal
+    function openModal() {
+      modalBackground.classList.remove("hidden");
+    }
+
+    // Function to close the modal
+    function closeModal() {
+      modalBackground.classList.add("hidden");
+    }
+
+    // Event listener for opening the modal when trigger is clicked
+    modalTrigger1.addEventListener("click", openModal);
+    modalTrigger2.addEventListener("click", openModal);
+    modalTrigger3.addEventListener("click", openModal);
+    modalTrigger4.addEventListener("click", openModal);
+
+    // Event listener for closing the modal
+    modalCloseBtn.addEventListener("click", closeModal);
+  </script>
+
+  <script>
+    // Get the modal and background elements
+    const modalBackground2 = document.getElementById("modal-background2");
+    const modalContent2 = document.getElementById("modal-content2");
+    const modalTriggera = document.getElementById("modal-triggera");
+    const modalTriggerb = document.getElementById("modal-triggerb");
+    const modalTriggerc = document.getElementById("modal-triggerc");
+    const modalTriggerd = document.getElementById("modal-triggerd");
+    const modalTriggere = document.getElementById("modal-triggere");
+    const modalTriggerf = document.getElementById("modal-triggerf");
+    const modalCloseBtn2 = document.getElementById("modal-close2");
+
+    // Function to open the modal
+    function openModal1() {
+      modalBackground2.classList.remove("hidden");
+    }
+
+    // Function to close the modal
+    function closeModal1() {
+      modalBackground2.classList.add("hidden");
+    }
+
+    // Event listener for opening the modal when trigger is clicked
+    modalTriggera.addEventListener("click", openModal1);
+    modalTriggerb.addEventListener("click", openModal1);
+    modalTriggerc.addEventListener("click", openModal1);
+    modalTriggerd.addEventListener("click", openModal1);
+    modalTriggere.addEventListener("click", openModal1);
+    modalTriggerf.addEventListener("click", openModal1);
+
+    // Event listener for closing the modal
+    modalCloseBtn2.addEventListener("click", closeModal1);
+  </script>
+
+  <script>
+    document.getElementById("menu-toggle").addEventListener("click", function () {
+      var navbar = document.getElementById("navbar-default");
+      var hamburgerIcon = document.getElementById("menu-toggle-icon");
+      var crossIcon = document.getElementById("menu-toggle-x");
+      var isHidden = navbar.classList.toggle("hidden");
+
+      // Toggle icons
+      if (isHidden) {
+        hamburgerIcon.classList.remove("hidden");
+        crossIcon.classList.add("hidden");
+        this.setAttribute("aria-expanded", "false");
+      } else {
+        hamburgerIcon.classList.add("hidden");
+        crossIcon.classList.remove("hidden");
+        this.setAttribute("aria-expanded", "true");
+      }
+    });
+  </script>
+</body>
+
+</html>
