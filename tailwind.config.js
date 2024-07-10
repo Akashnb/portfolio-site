@@ -19,7 +19,7 @@ module.exports = {
       white: "#ffffff",
       black: "#000000",
       primary: "#1da1f3",
-      primaryLight: "#f5f5f5",
+      primaryLight: "#fafafa",
       secondary: "#121212",
       secondaryLight: "#9e9e9e",
       secondaryDark: "#2222221A",
@@ -71,12 +71,6 @@ module.exports = {
           "border-radius": "50%",
           cursor: "pointer",
           "z-index": "10",
-        },
-        ".swiper-button-next-custom": {
-          right: "10px",
-        },
-        ".swiper-button-prev-custom": {
-          left: "10px",
         },
         "ol li::marker": {
           "font-weight": "bold" /* Makes the marker (number) bold */,
