@@ -9,37 +9,21 @@ module.exports = {
         "custom-gradient-button":
           "linear-gradient(90deg, #4AB1F1 0%, #566CEC 25%, #D749AF 50%, #FF7C51 75%, #FF7C51 100%)",
       },
-      boxShadow: {
-        "custom-gray": "0 4px 50px rgba(0,0,0,0.07)",
-      },
     },
-
     fontFamily: {
       audiowide: ["Audiowide", "cursive"],
       poppins: ["Poppins", "sans-serif"],
       monts: ["Montserrat", "sans-serif"],
     },
     colors: {
-      desccolor: "#9E9E9E",
-      white: "#FFFFFF",
+      white: "#ffffff",
       black: "#000000",
-      lighttext: "#9E9E9E",
-      bluecolor: "#1370B5",
-      textbluecolor: "#1DA1F3",
-      bordercard: "#2222221A",
+      primary: "#1da1f3",
+      primaryLight: "#f5f5f5",
+      secondary: "#121212",
+      secondaryLight: "#9e9e9e",
+      secondaryDark: "#2222221A",
       transparent: "#00000000",
-      gray: "#9E9E9E",
-    },
-    fontSize: {
-      desc: "1rem",
-      title: "2rem",
-      numbers: "3.5rem",
-      xl2: "1.5rem",
-      m: "0.87rem",
-      xl1: "1rem",
-    },
-    scale: {
-      "-100": "-1",
     },
   },
   plugins: [
