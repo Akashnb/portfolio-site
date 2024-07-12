@@ -28,8 +28,6 @@
   <meta name="twitter:image" content="https://akashb.vercel.app/Images/Logo.png" />
   <meta name="twitter:url" content="https://akashb.vercel.app/" />
 
-  <meta name="google-site-verification" content="9nMgu2Ictinwz9uEdKKKx_zRWt6LA-P_1r4JLBemfu4" />
-
   <title>Akash Bambhaniya - Front End Developer Portfolio</title>
 
   <!-- Canonical Link -->
@@ -98,7 +96,7 @@
             <a href="#portfolio" class="nav-link font-poppins hover:text-gradient text-base">Portfolio</a>
           </li>
           <li>
-            <a href="#contact-us" class="nav-link font-poppins hover:text-gradient text-base">Contact Us</a>
+            <a href="#contact-me" class="nav-link font-poppins hover:text-gradient text-base">Contact Me</a>
           </li>
           <li>
             <button type="button" class="gradient-btn text-white px-4 py-2 rounded-md shadow-md font-monts">Hire
@@ -109,7 +107,7 @@
     </div>
   </nav>
 
-  <main class="mainHome w-full home-bg-gradient pt-20 min-h-screen" id="home">
+  <main class="w-full home-bg-gradient pt-20 min-h-screen" id="home">
     <div class="flex flex-col p-6 h-full gap-2">
       <div class="flex flex-col items-center flex-1 gap-2">
         <img src="./Images/homePhoto.png" class="h-80" alt="home photo" />
@@ -123,8 +121,9 @@
           <p class="font-poppins md:text-center max-sm:w-full text-lg text-secondaryLight">
             Welcome to my portfolio! With over 5 years of experience in front-end development, I am passionate about
             creating visually appealing and highly functional user interfaces. My expertise lies in utilizing React.js
-            to bring innovative solutions to life. I'm dedicated to continuous learning and staying up-to-date with the
-            latest industry trends to deliver top-notch digital experiences.
+            to bring
+            innovative solutions to life. I'm dedicated to continuous learning and staying up-to-date with the latest
+            industry trends to deliver top-notch digital experiences.
           </p>
         </div>
         <a href="#about-me" class="gradient-btn text-white px-4 py-2 rounded-md shadow-md font-monts">About Me</a>
@@ -188,13 +187,14 @@
         <p class="text-2xl font-poppins font-bold">Turning Ideas into Reality</p>
         <p class="text-base font-poppins text-secondaryLight">
           Hello! I'm Akash Bambhaniya, a passionate Front-End Developer with over 5 years of experience in creating
-          stunning
-          and efficient web applications. My journey into web development began with a fascination for how websites work
+          stunning and efficient web applications. My journey into web development began with a fascination for how
+          websites work
           and a desire to build them myself. This curiosity quickly evolved into a career that I am deeply passionate
           about.
         </p>
         <p class="text-lg">
           <strong>My Expertise Includes:</strong>
+        </p>
         <ul class="list-disc list-inside ml-4">
           <li><strong>HTML5 & CSS3:</strong> Creating semantic and accessible web layouts.</li>
           <li><strong>JavaScript (ES6+):</strong> Utilizing modern JavaScript practices and patterns.</li>
@@ -202,7 +202,6 @@
           <li><strong>Tailwind CSS & Material-UI:</strong> Designing intuitive and aesthetically pleasing interfaces.
           </li>
         </ul>
-        </p>
       </div>
     </div>
   </section>
@@ -435,8 +434,7 @@
         </div>
       </div>
       <div class="flex md:justify-center justify-start mt-4">
-        <a href="#contact-us" class="gradient-btn text-white px-4 py-2 rounded-md shadow-md font-monts">Contact
-          Now</a>
+        <a href="#contact-me" class="gradient-btn text-white px-4 py-2 rounded-md shadow-md font-monts">Contact Now</a>
       </div>
     </div>
   </div>
@@ -691,8 +689,7 @@
         </div>
       </div>
       <div class="flex md:justify-center justify-start">
-        <a href="#contact-us" class="gradient-btn text-white px-4 py-2 rounded-md shadow-md font-monts">Contact
-          Now</a>
+        <a href="#contact-me" class="gradient-btn text-white px-4 py-2 rounded-md shadow-md font-monts">Contact Now</a>
       </div>
     </div>
   </div>
@@ -799,9 +796,7 @@
       </div>
 
       <div class="swiper">
-
         <div class="swiper-wrapper">
-
           <div class="bg-primaryLight p-4 rounded-xl swiper-slide h-5">
             <p class="mb-4 font-monts text-secondaryLight">
               Akash done fabulous job beyond my expectations. Highly recommend for any react with tailwindcss work.
@@ -1026,14 +1021,12 @@
             aria-label="Portfolio">Portfolio</a>
         </li>
         <li>
-          <a href="#contact-us" class="nav-link font-poppins hover:text-gradient text-base text-gradient"
-            aria-label="Contact Us">Contact
-            Us</a>
+          <a href="#contact-me" class="nav-link font-poppins hover:text-gradient text-base text-gradient"
+            aria-label="Contact Me">Contact Me</a>
         </li>
       </ul>
       <p class="font-monts font-[500] text-center" aria-label="Copyright information">© akashbambhaniya 2024, All rights
-        reserved.
-      </p>
+        reserved.</p>
     </div>
   </footer>
 
@@ -1183,31 +1176,30 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const navLinks = document.querySelectorAll('.nav-link');
+      const navLinks = document.querySelectorAll(".nav-link");
       const currentHash = window.location.hash;
 
-      navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentHash) {
-          link.classList.add('text-gradient');
+      navLinks.forEach((link) => {
+        if (link.getAttribute("href") === currentHash) {
+          link.classList.add("text-gradient");
         } else {
-          link.classList.remove('text-gradient');
+          link.classList.remove("text-gradient");
         }
       });
 
       // Optional: Update the active link on hash change
-      window.addEventListener('hashchange', function () {
+      window.addEventListener("hashchange", function () {
         const newHash = window.location.hash;
 
-        navLinks.forEach(link => {
-          if (link.getAttribute('href') === newHash) {
-            link.classList.add('text-gradient');
+        navLinks.forEach((link) => {
+          if (link.getAttribute("href") === newHash) {
+            link.classList.add("text-gradient");
           } else {
-            link.classList.remove('text-gradient');
+            link.classList.remove("text-gradient");
           }
         });
       });
     });
-
   </script>
 </body>
 
