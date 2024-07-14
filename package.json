@@ -6,7 +6,7 @@
   "scripts": {
     "start": "tailwindcss -o ./public/output.css --watch"
   },
-  "author": "Akash Bambhaniya",
+  "author": "Akash Bambhaniya | akash.dev.personal@gmail.com | https://akashb.vercel.app/",
   "license": "ISC",
   "private": true,
   "dependencies": {},
@@ -19,5 +19,6 @@
   },
   "engines": {
     "node": ">=18.0.0"
-  }
+  },
+  "homepage": "https://akashb.vercel.app/"
 }

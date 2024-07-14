@@ -57,8 +57,15 @@
       dataLayer.push(arguments);
     }
     gtag("js", new Date());
-
     gtag("config", "G-BDZ0GFDEE4");
+
+    // Function to send event data to Google Analytics
+    function trackEvent(eventCategory, eventAction, eventLabel) {
+      gtag('event', eventAction, {
+        'event_category': eventCategory,
+        'event_label': eventLabel
+      });
+    }
   </script>
 </head>
 
@@ -84,22 +91,28 @@
       <div class="hidden w-full md:block md:w-auto" id="navbar-default">
         <ul class="flex flex-col md:flex-row gap-6 md:items-center">
           <li>
-            <a href="#home" class="nav-link font-poppins hover:text-gradient text-base">Home</a>
+            <a href="#home" onclick="trackEvent('Menu', 'Click', 'Home')"
+              class="nav-link font-poppins hover:text-gradient text-base">Home</a>
           </li>
           <li>
-            <a href="#about-me" class="nav-link font-poppins hover:text-gradient text-base">About Me</a>
+            <a href="#about-me" onclick="trackEvent('Menu', 'Click', 'About Me')"
+              class="nav-link font-poppins hover:text-gradient text-base">About Me</a>
           </li>
           <li>
-            <a href="#services" class="nav-link font-poppins hover:text-gradient text-base">Services</a>
+            <a href="#services" onclick="trackEvent('Menu', 'Click', 'Services')"
+              class="nav-link font-poppins hover:text-gradient text-base">Services</a>
           </li>
           <li>
-            <a href="#portfolio" class="nav-link font-poppins hover:text-gradient text-base">Portfolio</a>
+            <a href="#portfolio" onclick="trackEvent('Menu', 'Click', 'Portfolio')"
+              class="nav-link font-poppins hover:text-gradient text-base">Portfolio</a>
           </li>
           <li>
-            <a href="#contact-me" class="nav-link font-poppins hover:text-gradient text-base">Contact Me</a>
+            <a href="#contact-me" onclick="trackEvent('Menu', 'Click', 'Contact Me')"
+              class="nav-link font-poppins hover:text-gradient text-base">Contact Me</a>
           </li>
           <li>
             <a href="https://drive.google.com/file/d/1yg6M7BUosRqhOqYeoOZ42l1q2cmySUZP/view?usp=sharing" target="_blank"
+              onclick="trackEvent('Menu', 'Click', 'Resume')"
               class="gradient-btn text-white px-4 py-2 rounded-md shadow-md font-monts">Resume</a>
           </li>
         </ul>
@@ -126,7 +139,8 @@
             industry trends to deliver top-notch digital experiences.
           </p>
         </div>
-        <a href="#about-me" class="gradient-btn text-white px-4 py-2 rounded-md shadow-md font-monts">About Me</a>
+        <a href="#about-me" onclick="trackEvent('Menu', 'Click', 'About Me')"
+          class="gradient-btn text-white px-4 py-2 rounded-md shadow-md font-monts">About Me</a>
       </div>
       <div class="flex items-end h-9 m-auto">
         <img src="./Images/mouse.png" class="h-7 animate-bounce" alt="mouse icon" />
@@ -1032,24 +1046,26 @@
       <span class="text-4xl text-gradient font-audiowide" aria-label="Brand name">akash</span>
       <ul class="flex flex-col md:flex-row gap-6 items-center" aria-label="Footer navigation">
         <li>
-          <a href="#home" class="nav-link font-poppins hover:text-gradient text-base text-gradient"
-            aria-label="Home">Home</a>
+          <a href="#home" onclick="trackEvent('Menu', 'Click', 'Home')"
+            class="nav-link font-poppins hover:text-gradient text-base text-gradient" aria-label="Home">Home</a>
         </li>
         <li>
-          <a href="#about-me" class="nav-link font-poppins hover:text-gradient text-base text-gradient"
-            aria-label="About Me">About Me</a>
+          <a href="#about-me" onclick="trackEvent('Menu', 'Click', 'About Me')"
+            class="nav-link font-poppins hover:text-gradient text-base text-gradient" aria-label="About Me">About Me</a>
         </li>
         <li>
-          <a href="#services" class="nav-link font-poppins hover:text-gradient text-base text-gradient"
-            aria-label="Services">Services</a>
+          <a href="#services" onclick="trackEvent('Menu', 'Click', 'Services')"
+            class="nav-link font-poppins hover:text-gradient text-base text-gradient" aria-label="Services">Services</a>
         </li>
         <li>
-          <a href="#portfolio" class="nav-link font-poppins hover:text-gradient text-base text-gradient"
+          <a href="#portfolio" onclick="trackEvent('Menu', 'Click', 'Portfolio')"
+            class="nav-link font-poppins hover:text-gradient text-base text-gradient"
             aria-label="Portfolio">Portfolio</a>
         </li>
         <li>
-          <a href="#contact-me" class="nav-link font-poppins hover:text-gradient text-base text-gradient"
-            aria-label="Contact Me">Contact Me</a>
+          <a href="#contact-me" onclick="trackEvent('Menu', 'Click', 'Contact Me')"
+            class="nav-link font-poppins hover:text-gradient text-base text-gradient" aria-label="Contact Me">Contact
+            Me</a>
         </li>
       </ul>
       <p class="font-monts font-[500] text-center" aria-label="Copyright information">© akashbambhaniya 2024, All rights
@@ -1227,6 +1243,47 @@
         });
       });
     });
+  </script>
+
+  <script>
+    let sections = ['home', 'about-me', 'services', 'portfolio', 'contact-me'];
+    let sectionTimers = {};
+    let observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5 // 50% of the section must be visible
+    };
+
+    let observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        let sectionId = entry.target.id;
+        if (entry.isIntersecting) {
+          sectionTimers[sectionId] = Date.now();
+        } else if (sectionTimers[sectionId]) {
+          let timeSpent = Date.now() - sectionTimers[sectionId];
+          gtag('event', 'Section Time Spent', {
+            'event_category': 'Section',
+            'event_label': sectionId,
+            'value': timeSpent
+          });
+          delete sectionTimers[sectionId];
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(section => {
+      observer.observe(document.getElementById(section));
+    });
+  </script>
+
+  <script type="text/javascript">
+    window._mfq = window._mfq || [];
+    (function () {
+      var mf = document.createElement("script");
+      mf.type = "text/javascript"; mf.defer = true;
+      mf.src = "//cdn.mouseflow.com/projects/2b34a017-35de-4b88-b4bc-7ab9a46fcbde.js";
+      document.getElementsByTagName("head")[0].appendChild(mf);
+    })();
   </script>
 </body>
 
