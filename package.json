@@ -4,15 +4,20 @@
   "description": "A personal portfolio website showcasing the work and skills of Akash Bambhaniya.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tailwindcss -i ./src/input.css -o ./public/output.css --watch"
+    "start": "tailwindcss -o ./public/output.css --watch"
   },
   "author": "Akash Bambhaniya",
   "license": "ISC",
+  "private": true,
+  "dependencies": {},
   "devDependencies": {
     "tailwindcss": "^3.4.4"
   },
-  "dependencies": {
-    "@tailwindcss/typography": "^0.5.13"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Akashnb/portfolio-site"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
