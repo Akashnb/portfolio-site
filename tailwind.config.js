@@ -30,11 +30,7 @@ module.exports = {
     function ({ addUtilities }) {
       addUtilities({
         ".swiper": {
-          width: "80vw",
-          height: "h-fit",
-        },
-        ".hover-invert": {
-          filter: "invert(100%)",
+          width: "87vw",
         },
         ".text-gradient": {
           background:
