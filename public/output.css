@@ -882,10 +882,6 @@ video {
   width: 15rem;
 }
 
-.w-80 {
-  width: 20rem;
-}
-
 .w-\[40vw\] {
   width: 40vw;
 }
@@ -898,10 +894,6 @@ video {
   width: 4rem;
 }
 
-.w-\[7rem\] {
-  width: 7rem;
-}
-
 .w-\[90vw\] {
   width: 90vw;
 }
@@ -912,14 +904,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.min-w-\[90vw\] {
-  min-width: 90vw;
-}
-
-.max-w-sm {
-  max-width: 24rem;
 }
 
 .flex-1 {
@@ -981,10 +965,6 @@ video {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.flex-row {
-  flex-direction: row;
-}
-
 .flex-col {
   flex-direction: column;
 }
@@ -1011,10 +991,6 @@ video {
 
 .justify-between {
   justify-content: space-between;
-}
-
-.gap-1 {
-  gap: 0.25rem;
 }
 
 .gap-2 {
@@ -1114,8 +1090,21 @@ video {
   border-width: 1px;
 }
 
+.border-l-4 {
+  border-left-width: 4px;
+}
+
+.border-t-4 {
+  border-top-width: 4px;
+}
+
 .border-secondaryDark {
   border-color: #2222221A;
+}
+
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
 .bg-\[\#27C840\] {
@@ -1189,11 +1178,6 @@ video {
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
-}
-
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
 }
 
 .px-3 {
@@ -1362,6 +1346,11 @@ video {
   color: rgb(222 78 16 / var(--tw-text-opacity));
 }
 
+.text-\[\#FF6057\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 96 87 / var(--tw-text-opacity));
+}
+
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -1452,14 +1441,6 @@ video {
 
 ol li::marker {
   font-weight: bold;
-}
-
-.hover\:border-l-\[3px\]:hover {
-  border-left-width: 3px;
-}
-
-.hover\:border-t-\[3px\]:hover {
-  border-top-width: 3px;
 }
 
 .hover\:border-primary:hover {
@@ -1573,14 +1554,6 @@ ol li::marker {
     width: 100%;
   }
 
-  .md\:min-w-\[18rem\] {
-    min-width: 18rem;
-  }
-
-  .md\:max-w-\[18rem\] {
-    max-width: 18rem;
-  }
-
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1611,10 +1584,6 @@ ol li::marker {
 
   .md\:justify-center {
     justify-content: center;
-  }
-
-  .md\:justify-evenly {
-    justify-content: space-evenly;
   }
 
   .md\:overflow-visible {
