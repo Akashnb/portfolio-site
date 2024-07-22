@@ -1,0 +1,64 @@
+{
+  "skills": [
+    {
+      "name": "HTML",
+      "url": "./Images/html.png"
+    },
+    {
+      "name": "CSS",
+      "url": "./Images/css.png"
+    },
+    {
+      "name": "Javascript",
+      "url": "./Images/javascript.png"
+    },
+    {
+      "name": "React.JS",
+      "url": "./Images/react.png"
+    },
+    {
+      "name": "Next.JS",
+      "url": "./Images/nextjs.png"
+    },
+    {
+      "name": "Typescript",
+      "url": "./Images/typescript.png"
+    },
+    {
+      "name": "Redux",
+      "url": "./Images/redux.png"
+    },
+    {
+      "name": "Git",
+      "url": "./Images/git.png"
+    },
+    {
+      "name": "SCSS / SASS",
+      "url": "./Images/sass.png"
+    },
+    {
+      "name": "Bootstrap",
+      "url": "./Images/bootstrap.png"
+    },
+    {
+      "name": "Tailwind CSS",
+      "url": "./Images/tailwindcss.png"
+    },
+    {
+      "name": "Material UI",
+      "url": "./Images/materialui.png"
+    },
+    {
+      "name": "Eslint",
+      "url": "./Images/eslint.png"
+    },
+    {
+      "name": "Jira",
+      "url": "./Images/jira.png"
+    },
+    {
+      "name": "Trello",
+      "url": "./Images/trello.png"
+    }
+  ]
+}

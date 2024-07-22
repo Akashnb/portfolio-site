@@ -133,13 +133,10 @@
         <div class="w-full sm:w-9/12">
           <p class="font-poppins md:text-center max-sm:w-full text-lg text-secondaryLight">
             Welcome to my portfolio! With over <span class="font-bold text-black">5 years of experience</span> in
-            front-end
-            development, I am
-            passionate about
-            creating visually appealing and highly functional user interfaces. My expertise lies in utilizing React.js
-            to bring
-            innovative solutions to life. I'm dedicated to continuous learning and staying up-to-date with the latest
-            industry trends to deliver top-notch digital experiences.
+            front-end development, I am passionate about creating visually appealing and highly functional user
+            interfaces. My expertise
+            lies in utilizing React.js to bring innovative solutions to life. I'm dedicated to continuous learning and
+            staying up-to-date with the latest industry trends to deliver top-notch digital experiences.
           </p>
         </div>
         <a href="#about-me" onclick="trackEvent('Menu', 'Click', 'About Me')"
@@ -490,23 +487,8 @@
       </div>
 
       <div class="flex w-full justify-center">
-        <div class="grid grid-cols-2 sm:grid-cols-5 md:grid-cols-8 gap-4">
-          <img src="./Images/javascript.png" alt="JavaScript" />
-          <img src="./Images/typescript.png" alt="TypeScript" />
-          <img src="./Images/reactjs.png" alt="ReactJS" />
-          <img src="./Images/next.png" alt="Next.js" />
-          <img src="./Images/nodejs.png" alt="Tech" />
-          <img src="./Images/express.png" alt="Express" />
-          <img src="./Images/nextjs.png" alt="Nest" />
-          <img src="./Images/socketio.png" alt="Socket.io" />
-          <img src="./Images/postgre.png" alt="PostgreSQL" />
-          <img src="./Images/mongodb.png" alt="MongoDB" />
-          <img src="./Images/saas.png" alt="SaaS" />
-          <img src="./Images/tailwindcss.png" alt="TailwindCSS" />
-          <img src="./Images/figma.png" alt="Figma" />
-          <img src="./Images/cypress.png" alt="Cypress" />
-          <img src="./Images/storybook.png" alt="Storybook" />
-          <img src="./Images/git.png" alt="Git" />
+        <div class="grid grid-cols-2 sm:grid-cols-5 md:grid-cols-8 gap-4" id="skills-container">
+          <!-- Dynamic Skills -->
         </div>
       </div>
     </div>
@@ -656,7 +638,7 @@
             <div class="p-0.5 h-min bg-gradient rounded-[0.6rem]">
               <button type="button"
                 class="bg-white font-poppins font-medium rounded-lg px-5 py-2.5 m-0 hover:bg-transparent hover:text-white">
-                Product
+                UI / UX
               </button>
             </div>
           </div>
@@ -1108,25 +1090,6 @@
     modalCloseBtn2.addEventListener("click", closeModal1);
   </script>
 
-  <script>
-    document.getElementById("menu-toggle").addEventListener("click", function () {
-      var navbar = document.getElementById("navbar-default");
-      var hamburgerIcon = document.getElementById("menu-toggle-icon");
-      var crossIcon = document.getElementById("menu-toggle-x");
-      var isHidden = navbar.classList.toggle("hidden");
-
-      // Toggle icons
-      if (isHidden) {
-        hamburgerIcon.classList.remove("hidden");
-        crossIcon.classList.add("hidden");
-        this.setAttribute("aria-expanded", "false");
-      } else {
-        hamburgerIcon.classList.add("hidden");
-        crossIcon.classList.remove("hidden");
-        this.setAttribute("aria-expanded", "true");
-      }
-    });
-  </script>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -1188,23 +1151,75 @@
   </script>
 
   <script>
-    let form = document.querySelector("form");
+    document.addEventListener("DOMContentLoaded", () => {
+      // Header Menu
+      document.getElementById("menu-toggle").addEventListener("click", () => {
+        const navbar = document.getElementById("navbar-default");
+        const hamburgerIcon = document.getElementById("menu-toggle-icon");
+        const crossIcon = document.getElementById("menu-toggle-x");
+        const isHidden = navbar.classList.toggle("hidden");
 
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
+        // Toggle icons
+        if (isHidden) {
+          hamburgerIcon.classList.remove("hidden");
+          crossIcon.classList.add("hidden");
+          this.setAttribute("aria-expanded", "false");
+        } else {
+          hamburgerIcon.classList.add("hidden");
+          crossIcon.classList.remove("hidden");
+          this.setAttribute("aria-expanded", "true");
+        }
+      });
 
-      form.querySelector("button").value = "Submiting..";
-
-      let data = new FormData(form);
-
-      fetch("https://script.google.com/macros/s/AKfycbw7XAqLhoXNliUzwTnEDSd06XLTsfxFy7zzOtnx86xIxTGW43t7nJJlgqRkNQqrU9E/exec", {
-        method: "POST",
-        body: data,
-      })
-        .then((res) => res.text())
+      // Skills
+      fetch("./constants.json")
+        .then((response) => response.json())
         .then((data) => {
-          form.querySelector("#sub").value = "Send Message";
+          const skills = data.skills;
+
+          const skillsContainer = document.getElementById("skills-container");
+
+          skills.forEach((skill) => {
+            const skillElement = document.createElement("div");
+            skillElement.classList.add("flex", "flex-col", "items-center", "gap-2");
+
+            const imgElement = document.createElement("img");
+            imgElement.classList.add("size-20");
+            imgElement.src = skill.url;
+            imgElement.alt = skill.name;
+
+            const nameElement = document.createElement("p");
+            nameElement.classList.add("font-poppins", "text-md");
+            nameElement.textContent = skill.name;
+
+            skillElement.appendChild(imgElement);
+            skillElement.appendChild(nameElement);
+            skillsContainer.appendChild(skillElement);
+          });
+        })
+        .catch((error) => {
+          console.error("Error fetching the JSON file:", error);
         });
+
+      // Contact US
+      let form = document.querySelector("form");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        form.querySelector("button").value = "Submiting..";
+
+        let data = new FormData(form);
+
+        fetch("https://script.google.com/macros/s/AKfycbw7XAqLhoXNliUzwTnEDSd06XLTsfxFy7zzOtnx86xIxTGW43t7nJJlgqRkNQqrU9E/exec", {
+          method: "POST",
+          body: data,
+        })
+          .then((res) => res.text())
+          .then((data) => {
+            form.querySelector("#sub").value = "Send Message";
+          });
+      });
     });
   </script>
 </body>
