@@ -2,63 +2,105 @@
   "skills": [
     {
       "name": "HTML",
-      "url": "./Images/html.png"
+      "url": "./Images/skills/html.png"
     },
     {
       "name": "CSS",
-      "url": "./Images/css.png"
+      "url": "./Images/skills/css.png"
     },
     {
       "name": "Javascript",
-      "url": "./Images/javascript.png"
+      "url": "./Images/skills/javascript.png"
     },
     {
       "name": "React.JS",
-      "url": "./Images/react.png"
+      "url": "./Images/skills/react.png"
     },
     {
       "name": "Next.JS",
-      "url": "./Images/nextjs.png"
+      "url": "./Images/skills/nextjs.png"
     },
     {
       "name": "Typescript",
-      "url": "./Images/typescript.png"
+      "url": "./Images/skills/typescript.png"
     },
     {
       "name": "Redux",
-      "url": "./Images/redux.png"
+      "url": "./Images/skills/redux.png"
     },
     {
       "name": "Git",
-      "url": "./Images/git.png"
+      "url": "./Images/skills/git.png"
     },
     {
       "name": "SCSS / SASS",
-      "url": "./Images/sass.png"
+      "url": "./Images/skills/sass.png"
     },
     {
       "name": "Bootstrap",
-      "url": "./Images/bootstrap.png"
+      "url": "./Images/skills/bootstrap.png"
     },
     {
       "name": "Tailwind CSS",
-      "url": "./Images/tailwindcss.png"
+      "url": "./Images/skills/tailwindcss.png"
     },
     {
       "name": "Material UI",
-      "url": "./Images/materialui.png"
+      "url": "./Images/skills/materialui.png"
     },
     {
       "name": "Eslint",
-      "url": "./Images/eslint.png"
+      "url": "./Images/skills/eslint.png"
     },
     {
       "name": "Jira",
-      "url": "./Images/jira.png"
+      "url": "./Images/skills/jira.png"
     },
     {
       "name": "Trello",
-      "url": "./Images/trello.png"
+      "url": "./Images/skills/trello.png"
+    }
+  ],
+  "portfolio": [
+    {
+      "heading": "Private Company",
+      "subHeading": "Web design",
+      "url": "./Images/portfolio/11.jpg"
+    },
+    {
+      "heading": "Private Company",
+      "subHeading": "Web design",
+      "url": "./Images/portfolio/01.jpg"
+    },
+    {
+      "heading": "Private Company",
+      "subHeading": "Web design",
+      "url": "./Images/portfolio/06.jpg"
+    },
+    {
+      "heading": "Private Company",
+      "subHeading": "Web design",
+      "url": "./Images/portfolio/07.jpg"
+    },
+    {
+      "heading": "Private Company",
+      "subHeading": "Web design",
+      "url": "./Images/portfolio/04.jpg"
+    },
+    {
+      "heading": "Private Company",
+      "subHeading": "Web design",
+      "url": "./Images/portfolio/05.jpg"
+    },
+    {
+      "heading": "Private Company",
+      "subHeading": "App design",
+      "url": "./Images/portfolio/10.jpg"
+    },
+    {
+      "heading": "Private Company",
+      "subHeading": "Web design",
+      "url": "./Images/portfolio/02.jpg"
     }
   ]
 }
