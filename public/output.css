@@ -16,7 +16,7 @@
   /* 2 */
   border-style: solid;
   /* 2 */
-  border-color: currentColor;
+  border-color: #e5e7eb;
   /* 2 */
 }
 
@@ -834,11 +834,6 @@ video {
   height: 100%;
 }
 
-.h-min {
-  height: -moz-min-content;
-  height: min-content;
-}
-
 .max-h-\[80vh\] {
   max-height: 80vh;
 }
@@ -1056,15 +1051,6 @@ video {
   gap: 2rem;
 }
 
-.gap-x-2 {
-  -moz-column-gap: 0.5rem;
-       column-gap: 0.5rem;
-}
-
-.gap-y-2 {
-  row-gap: 0.5rem;
-}
-
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -1095,10 +1081,6 @@ video {
 
 .whitespace-nowrap {
   white-space: nowrap;
-}
-
-.rounded {
-  border-radius: 0.25rem;
 }
 
 .rounded-2xl {
@@ -1161,11 +1143,6 @@ video {
   background-color: rgb(255 96 87 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#FFEEE7\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 238 231 / var(--tw-bg-opacity));
-}
-
 .bg-\[\#fdbc2e\] {
   --tw-bg-opacity: 1;
   background-color: rgb(253 188 46 / var(--tw-bg-opacity));
@@ -1179,6 +1156,10 @@ video {
 .bg-primaryLight {
   --tw-bg-opacity: 1;
   background-color: rgb(250 250 250 / var(--tw-bg-opacity));
+}
+
+.bg-transparent {
+  background-color: #00000000;
 }
 
 .bg-white {
@@ -1375,16 +1356,6 @@ video {
   font-weight: 600;
 }
 
-.text-\[\#1DA1F3\] {
-  --tw-text-opacity: 1;
-  color: rgb(29 161 243 / var(--tw-text-opacity));
-}
-
-.text-\[\#DE4E10\] {
-  --tw-text-opacity: 1;
-  color: rgb(222 78 16 / var(--tw-text-opacity));
-}
-
 .text-\[\#FF6057\] {
   --tw-text-opacity: 1;
   color: rgb(255 96 87 / var(--tw-text-opacity));
@@ -1427,6 +1398,11 @@ video {
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.drop-shadow {
+  --tw-drop-shadow: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .transition {

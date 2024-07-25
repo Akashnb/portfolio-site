@@ -1,4 +1,48 @@
 {
+  "testimonial": [
+    {
+      "name": "Upwork Client",
+      "designation": "Product Owner",
+      "imageUrl": "./Images/image-5.png",
+      "message": "Akash done fabulous job beyond my expectations. Highly recommend for any react with tailwindcss work. Thank you akash for your hard work."
+    },
+    {
+      "name": "Aashish",
+      "designation": "CEO at Nexprism Company",
+      "imageUrl": "./Images/image-5.png",
+      "message": "Amazing work done and communication is awesome, We will Hire again."
+    },
+    {
+      "name": "Chirag Vyas",
+      "designation": "CEO at Vytech Enterprise",
+      "imageUrl": "./Images/image-5.png",
+      "message": "Akash's web design skill is excellent. He is also involved in developing our company's websites."
+    },
+    {
+      "name": "Vipul Limbachiya",
+      "designation": "CEO at UpforceTech",
+      "imageUrl": "./Images/image-5.png",
+      "message": "Coming Soon......"
+    },
+    {
+      "name": "Vishal Sherathiya",
+      "designation": "CEO at Techanzo",
+      "imageUrl": "./Images/image-5.png",
+      "message": " I worked with Akash for around 4 years. His development and team management skills are unmeasurable. He provided daily updates on top of good communication."
+    },
+    {
+      "name": "Prasanna Sreenivas",
+      "designation": "CEO at Skill Instill Technologies",
+      "imageUrl": "./Images/image-5.png",
+      "message": "Coming Soon......"
+    },
+    {
+      "name": "Raghu Kiran",
+      "designation": "MD at SpaceAge Labs",
+      "imageUrl": "./Images/image-5.png",
+      "message": "Coming Soon......"
+    }
+  ],
   "skills": [
     {
       "name": "HTML",
@@ -63,44 +107,60 @@
   ],
   "portfolio": [
     {
-      "heading": "Private Company",
+      "id": "portfolio-1",
+      "heading": "Acadly",
       "subHeading": "Web design",
-      "url": "./Images/portfolio/11.jpg"
+      "imageUrl": "./Images/portfolio/11.jpg",
+      "liveUrl": "https://sbstnew.acadly.com/"
     },
     {
+      "id": "portfolio-2",
       "heading": "Private Company",
       "subHeading": "Web design",
-      "url": "./Images/portfolio/01.jpg"
+      "imageUrl": "./Images/portfolio/01.jpg",
+      "liveUrl": "https://vytechenterprise.com/"
     },
     {
-      "heading": "Private Company",
+      "id": "portfolio-3",
+      "heading": "Personal Portfolio",
       "subHeading": "Web design",
-      "url": "./Images/portfolio/06.jpg"
+      "imageUrl": "./Images/portfolio/06.jpg",
+      "liveUrl": "https://akashb.vercel.app/"
     },
     {
-      "heading": "Private Company",
+      "id": "portfolio-4",
+      "heading": "RK Water",
       "subHeading": "Web design",
-      "url": "./Images/portfolio/07.jpg"
+      "imageUrl": "./Images/portfolio/07.jpg",
+      "liveUrl": "https://rkwater.vercel.app/"
     },
     {
-      "heading": "Private Company",
+      "id": "portfolio-5",
+      "heading": "Gauttam Gaushala",
       "subHeading": "Web design",
-      "url": "./Images/portfolio/04.jpg"
+      "imageUrl": "./Images/portfolio/04.jpg",
+      "liveUrl": "https://gauttam-gaushala-bantwa.web.app/"
     },
     {
-      "heading": "Private Company",
+      "id": "portfolio-6",
+      "heading": "Invest Here",
       "subHeading": "Web design",
-      "url": "./Images/portfolio/05.jpg"
+      "imageUrl": "./Images/portfolio/05.jpg",
+      "liveUrl": "https://invest-here.vercel.app/"
     },
     {
+      "id": "portfolio-7",
       "heading": "Private Company",
       "subHeading": "App design",
-      "url": "./Images/portfolio/10.jpg"
+      "imageUrl": "./Images/portfolio/10.jpg",
+      "liveUrl": "-"
     },
     {
-      "heading": "Private Company",
+      "id": "portfolio-8",
+      "heading": "Indian Rider",
       "subHeading": "Web design",
-      "url": "./Images/portfolio/02.jpg"
+      "imageUrl": "./Images/portfolio/02.jpg",
+      "liveUrl": "https://indian-rider-ui.web.app/"
     }
   ]
 }

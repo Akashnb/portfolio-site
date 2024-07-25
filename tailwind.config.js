@@ -24,20 +24,20 @@ module.exports = {
         "custom-gradient-button":
           "linear-gradient(90deg, #4AB1F1 0%, #566CEC 25%, #D749AF 50%, #FF7C51 75%, #FF7C51 100%)",
       },
-    },
-    fontFamily: {
-      audiowide: ["Audiowide", "cursive"],
-      poppins: ["Poppins", "sans-serif"],
-      monts: ["Montserrat", "sans-serif"],
-    },
-    colors: {
-      white: "#ffffff",
-      black: "#000000",
-      primary: "#1da1f3",
-      primaryLight: "#fafafa",
-      secondary: "#121212",
-      secondaryDark: "#2222221A",
-      transparent: "#00000000",
+      fontFamily: {
+        audiowide: ["Audiowide", "cursive"],
+        poppins: ["Poppins", "sans-serif"],
+        monts: ["Montserrat", "sans-serif"],
+      },
+      colors: {
+        white: "#ffffff",
+        black: "#000000",
+        primary: "#1da1f3",
+        primaryLight: "#fafafa",
+        secondary: "#121212",
+        secondaryDark: "#2222221A",
+        transparent: "#00000000",
+      },
     },
   },
   plugins: [
