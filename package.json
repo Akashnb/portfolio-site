@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A personal portfolio website showcasing the work and skills of Akash Bambhaniya.",
   "main": "index.js",
+  "url": "https://akashb.in/",
   "scripts": {
     "start": "tailwindcss -o ./public/output.css --watch"
   },
