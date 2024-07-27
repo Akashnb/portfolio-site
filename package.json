@@ -5,7 +5,7 @@
   "main": "index.js",
   "url": "https://akashb.in/",
   "scripts": {
-    "start": "tailwindcss -o ./public/output.css --watch"
+    "start": "tailwindcss -i ./custom.css -o ./public/output.css --watch"
   },
   "author": "Akash Bambhaniya | akash.dev.personal@gmail.com | https://akashb.vercel.app/",
   "license": "ISC",
