@@ -647,7 +647,7 @@
       <p class="font-poppins font-medium mt-3">
         Project Details&nbsp;:&nbsp;
       </p>
-      <p class="font-poppins mt-3" id="portfolio-project-details">
+      <p class="font-poppins mt-3" id="portfolio-project-description">
         Our strategy for this project focused on understanding the client's
         vision and delivering a cohesive design that resonated with their
         target audience. We prioritized a user-centric design approach,
@@ -656,44 +656,7 @@
         technologies to create a responsive and engaging user experience.
       </p>
       <div class="flex flex-wrap gap-2 mt-3" id="portfolio-project-tools">
-        <div class="bg-[#EAF7FF] text-primary px-2.5 py-1.5">
-          Infinite scroll
-        </div>
-        <div class="bg-[#EAF7FF] text-primary px-2.5 py-1.5">
-          Virtualization
-        </div>
-        <div class="bg-[#EAF7FF] text-primary px-2.5 py-1.5">
-          Complex forms
-        </div>
-        <div class="bg-[#EAF7FF] text-primary px-2.5 py-1.5">Drag & Drop</div>
-        <div class="bg-[#EAF7FF] text-primary px-2.5 py-1.5">
-          Product tour
-        </div>
-        <div class="bg-[#EAF7FF] text-primary px-2.5 py-1.5">Chat</div>
-        <div class="bg-[#EAF7FF] text-primary px-2.5 py-1.5">
-          Real-time updates
-        </div>
-        <div class="bg-[#EAF7FF] text-primary px-2.5 py-1.5">
-          Zoom integration
-        </div>
-        <div class="bg-[#EAF7FF] text-primary px-2.5 py-1.5">
-          Video player
-        </div>
-        <div class="bg-[#EAF7FF] text-primary px-2.5 py-1.5">
-          Rich-text editor
-        </div>
-        <div class="bg-[#EAF7FF] text-primary px-2.5 py-1.5">
-          Payment wall
-        </div>
-        <div class="bg-[#EAF7FF] text-primary px-2.5 py-1.5">
-          Responsiveness
-        </div>
-        <div class="bg-[#EAF7FF] text-primary px-2.5 py-1.5">
-          Multi-language support
-        </div>
-        <div class="bg-[#EAF7FF] text-primary px-2.5 py-1.5">
-          Modular codebase
-        </div>
+        <!-- Dynamic Tools -->
       </div>
     </div>
   </div>
@@ -1052,9 +1015,11 @@
     };
 
     const displayPortfolio = (portfolio) => {
+      const htmlTag = document.querySelector('html');
       const portfolioModal = document.getElementById("portfolio-modal");
       portfolioModal.querySelector("#portfolio-modal-close").onclick = () => {
         portfolioModal.classList.add("hidden");
+        htmlTag.classList.remove('overflow-hidden');
       };
 
       const portfolioContainer = document.getElementById(
@@ -1062,7 +1027,6 @@
       );
 
       portfolio.forEach((item) => {
-        console.log('1064-> item', item);
         const portfolioElement = document.createElement("div");
         portfolioElement.classList.add(
           "flex",
@@ -1074,14 +1038,26 @@
         );
         portfolioElement.innerHTML = `<img src="${item.imageUrl}" alt="${item.heading}" class="rounded-2xl"><div class="px-4 box-border"><p class="font-poppins font-medium">${item.heading}</p><p class="font-poppins text-sm">${item.subHeading}</p></div>`;
         portfolioElement.onclick = () => {
-          portfolioModal.querySelector("#portfolio-project-image").style.backgroundImage = `url('${item.imageUrl}')`;
-          portfolioModal.querySelector("#portfolio-project-name").innerText = item.heading;
-          portfolioModal.querySelector("#portfolio-project-type").innerText = item.subHeading;
           const portfolioProjectURL = portfolioModal.querySelector("#portfolio-project-url");
           portfolioProjectURL.innerText = item.liveUrl;
           portfolioProjectURL.href = item.liveUrl;
 
+          const portfolioProjectTools = portfolioModal.querySelector("#portfolio-project-tools");
+          item.tools.forEach((tool) => {
+            const toolDiv = document.createElement('div');
+            toolDiv.classList.add('bg-[#EAF7FF]', 'text-primary', 'px-2.5', 'py-1.5');
+            toolDiv.textContent = tool;
+            portfolioProjectTools.appendChild(toolDiv);
+
+          })
+
+          portfolioModal.querySelector("#portfolio-project-image").style.backgroundImage = `url('${item.imageUrl}')`;
+          portfolioModal.querySelector("#portfolio-project-name").innerText = item.heading;
+          portfolioModal.querySelector("#portfolio-project-type").innerText = item.subHeading;
+          portfolioModal.querySelector("#portfolio-project-description").innerText = item.description;
+
           portfolioModal.classList.remove("hidden");
+          htmlTag.classList.add('overflow-hidden');
         };
 
         portfolioContainer.appendChild(portfolioElement);
