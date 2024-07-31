@@ -504,22 +504,6 @@
           </div>
         </div>
         <div class="rounded-2xl px-6 pb-6 border-l-4 border-t-4 border-white hover:border-primary flex flex-col gap-2">
-          <img src="./Images/image-15.png" class="w-[4rem]" alt="UI/UX design" />
-          <h2 class="font-semibold text-md font-poppins">UI/UX Design</h2>
-          <p class="text-[0.85rem] font-poppins">
-            Creating visually appealing and user-friendly interfaces that
-            enhance usability and engagement, focusing on intuitive
-            navigation, interactive elements, and aesthetically pleasing
-            design to deliver exceptional user experiences.
-          </p>
-          <div id="modal-trigger3" class="flex items-center">
-            <div class="p-1 bg-primary size-2"></div>
-            <span href="#"
-              class="inline-block px-4 py-2 text-primary font-poppins text-left font-semibold rounded-md cursor-pointer">
-              Read More</span>
-          </div>
-        </div>
-        <div class="rounded-2xl px-6 pb-6 border-l-4 border-t-4 border-white hover:border-primary flex flex-col gap-2">
           <img src="./Images/image-16.png" class="w-[4rem]" alt="software development" />
           <h2 class="font-semibold text-md font-poppins">
             Software Development
@@ -531,6 +515,22 @@
             reliability, efficiency, and scalability.
           </p>
           <div id="modal-trigger4" class="flex items-center">
+            <div class="p-1 bg-primary size-2"></div>
+            <span href="#"
+              class="inline-block px-4 py-2 text-primary font-poppins text-left font-semibold rounded-md cursor-pointer">
+              Read More</span>
+          </div>
+        </div>
+        <div class="rounded-2xl px-6 pb-6 border-l-4 border-t-4 border-white hover:border-primary flex flex-col gap-2">
+          <img src="./Images/image-15.png" class="w-[4rem]" alt="UI/UX design" />
+          <h2 class="font-semibold text-md font-poppins">UI/UX Design</h2>
+          <p class="text-[0.85rem] font-poppins">
+            Creating visually appealing and user-friendly interfaces that
+            enhance usability and engagement, focusing on intuitive
+            navigation, interactive elements, and aesthetically pleasing
+            design to deliver exceptional user experiences.
+          </p>
+          <div id="modal-trigger3" class="flex items-center">
             <div class="p-1 bg-primary size-2"></div>
             <span href="#"
               class="inline-block px-4 py-2 text-primary font-poppins text-left font-semibold rounded-md cursor-pointer">
@@ -586,19 +586,19 @@
           <div
             class="buttons flex gap-3 md:w-full whitespace-nowrap md:overflow-visible overflow-scroll w-[90vw] md:justify-center">
             <div class="p-0.5 bg-gradient rounded-lg">
-              <button type="button"
-                class="font-poppins font-medium rounded-lg px-5 py-2.5 m-0 bg-transparent text-white hover:bg-transparent hover:text-white">
+              <button type="button" id="all-portfolio"
+                class="font-poppins font-medium rounded-lg px-5 py-2.5 m-0 bg-transparent text-white">
                 All
               </button>
             </div>
             <div class="p-0.5 bg-gradient rounded-lg">
-              <button type="button"
+              <button type="button" id="web-design-portfolio"
                 class="bg-white font-poppins font-medium rounded-lg px-5 py-2.5 m-0 hover:bg-transparent hover:text-white">
                 Web Design
               </button>
             </div>
             <div class="p-0.5 bg-gradient rounded-lg">
-              <button type="button"
+              <button type="button" id="app-design-portfolio"
                 class="bg-white font-poppins font-medium rounded-lg px-5 py-2.5 m-0 hover:bg-transparent hover:text-white">
                 App Design
               </button>
@@ -856,293 +856,18 @@
             Me</a>
         </li>
       </ul>
-      <p class="font-poppins font-medium text-center" aria-label="Copyright information">
-        © akashbambhaniya 2024, All rights reserved.
+      <p class="font-poppins font-medium text-center flex flex-col">
+        <span>
+          +91 7284905540
+        </span>
+        <span aria-label="Copyright information">
+          © akashbambhaniya 2024, All rights reserved.
+        </span>
       </p>
     </div>
   </footer>
 
-  <script>
-    const initializeSwiper = () => {
-      const swiper = new Swiper(".swiper", {
-        direction: "horizontal",
-        loop: false,
-        slidesPerView: 1,
-        centeredSlides: true,
-        spaceBetween: 35,
-        initialSlide: 1,
-        navigation: {
-          nextEl: ".swiper-button-next-custom",
-          prevEl: ".swiper-button-prev-custom",
-        },
-        scrollbar: {
-          el: ".swiper-scrollbar",
-          draggable: true,
-        },
-        breakpoints: {
-          768: {
-            slidesPerView: 3,
-          },
-        },
-      });
-
-      swiper.on("slideChange", updateActiveSlideBackground);
-      updateActiveSlideBackground();
-    };
-
-    const updateActiveSlideBackground = () => {
-      document.querySelectorAll(".swiper-slide").forEach((slide) => {
-        slide.classList.remove("swiper-slide-active");
-      });
-
-      const activeSlide = document.querySelector(".swiper-slide-active");
-      if (activeSlide) {
-        activeSlide.classList.add("swiper-slide-active");
-      }
-    };
-
-    const initializeModals = () => {
-      const modals = [
-        {
-          background: "modal-background",
-          triggers: [
-            "modal-trigger1",
-            "modal-trigger2",
-            "modal-trigger3",
-            "modal-trigger4",
-          ],
-          closeBtn: "modal-close",
-        },
-      ];
-
-      modals.forEach((modal) => {
-        const modalBackground = document.getElementById(modal.background);
-        const closeModalBtn = document.getElementById(modal.closeBtn);
-        const openModal = () => modalBackground.classList.remove("hidden");
-        const closeModal = () => modalBackground.classList.add("hidden");
-
-        modal.triggers.forEach((triggerId) => {
-          document
-            .getElementById(triggerId)
-            .addEventListener("click", openModal);
-        });
-        closeModalBtn.addEventListener("click", closeModal);
-      });
-    };
-
-    const highlightActiveNavLink = () => {
-      const navLinks = document.querySelectorAll(".nav-link");
-      const updateActiveLink = () => {
-        const currentHash = window.location.hash;
-        navLinks.forEach((link) => {
-          if (link.getAttribute("href") === currentHash) {
-            link.classList.add("text-gradient");
-          } else {
-            link.classList.remove("text-gradient");
-          }
-        });
-      };
-
-      updateActiveLink();
-      window.addEventListener("hashchange", updateActiveLink);
-    };
-
-    const trackSectionTimeSpent = () => {
-      const sections = [
-        "home",
-        "about-me",
-        "services",
-        "portfolio",
-        "contact-me",
-      ];
-      const sectionTimers = {};
-      const observerOptions = {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.5,
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          const sectionId = entry.target.id;
-          if (entry.isIntersecting) {
-            sectionTimers[sectionId] = Date.now();
-          } else if (sectionTimers[sectionId]) {
-            const timeSpent = Date.now() - sectionTimers[sectionId];
-            gtag("event", "Section Time Spent", {
-              event_category: "Section",
-              event_label: sectionId,
-              value: timeSpent,
-            });
-            delete sectionTimers[sectionId];
-          }
-        });
-      }, observerOptions);
-
-      sections.forEach((section) =>
-        observer.observe(document.getElementById(section))
-      );
-    };
-
-    const setupHeaderMenu = () => {
-      document.getElementById("menu-toggle").addEventListener("click", () => {
-        const navbar = document.getElementById("navbar-default");
-        const hamburgerIcon = document.getElementById("menu-toggle-icon");
-        const crossIcon = document.getElementById("menu-toggle-x");
-        const isHidden = navbar.classList.toggle("hidden");
-
-        hamburgerIcon.classList.toggle("hidden", !isHidden);
-        crossIcon.classList.toggle("hidden", isHidden);
-        this.setAttribute("aria-expanded", !isHidden);
-      });
-    };
-
-    const displaySkills = (skills) => {
-      const skillsContainer = document.getElementById("skills-container");
-
-      skills.forEach((item) => {
-        const skillElement = document.createElement("div");
-        skillElement.classList.add(
-          "flex",
-          "flex-col",
-          "items-center",
-          "gap-2"
-        );
-        skillElement.innerHTML = `<div class="flex flex-col items-center gap-2"><img class="size-20" src="${item.url}" alt="${item.name}"><p class="font-poppins text-md">${item.name}</p></div>`;
-
-        skillsContainer.appendChild(skillElement);
-      });
-    };
-
-    const displayPortfolio = (portfolio) => {
-      const htmlTag = document.querySelector('html');
-      const portfolioModal = document.getElementById("portfolio-modal");
-      portfolioModal.querySelector("#portfolio-modal-close").onclick = () => {
-        portfolioModal.classList.add("hidden");
-        htmlTag.classList.remove('overflow-hidden');
-      };
-
-      const portfolioContainer = document.getElementById(
-        "portfolio-container"
-      );
-
-      portfolio.forEach((item) => {
-        const portfolioElement = document.createElement("div");
-        portfolioElement.classList.add(
-          "flex",
-          "flex-col",
-          "gap-2",
-          "modal-trigger",
-          "drop-shadow",
-          "cursor-pointer"
-        );
-        portfolioElement.innerHTML = `<img src="${item.imageUrl}" alt="${item.heading}" class="rounded-2xl"><div class="px-4 box-border"><p class="font-poppins font-medium">${item.heading}</p><p class="font-poppins text-sm">${item.subHeading}</p></div>`;
-        portfolioElement.onclick = () => {
-          const portfolioProjectURL = portfolioModal.querySelector("#portfolio-project-url");
-          portfolioProjectURL.innerText = item.liveUrl;
-          portfolioProjectURL.href = item.liveUrl;
-
-          const portfolioProjectTools = portfolioModal.querySelector("#portfolio-project-tools");
-          item.tools.forEach((tool) => {
-            const toolDiv = document.createElement('div');
-            toolDiv.classList.add('bg-[#EAF7FF]', 'text-primary', 'px-2.5', 'py-1.5');
-            toolDiv.textContent = tool;
-            portfolioProjectTools.appendChild(toolDiv);
-
-          })
-
-          portfolioModal.querySelector("#portfolio-project-image").style.backgroundImage = `url('${item.imageUrl}')`;
-          portfolioModal.querySelector("#portfolio-project-name").innerText = item.heading;
-          portfolioModal.querySelector("#portfolio-project-type").innerText = item.subHeading;
-          portfolioModal.querySelector("#portfolio-project-description").innerText = item.description;
-
-          portfolioModal.classList.remove("hidden");
-          htmlTag.classList.add('overflow-hidden');
-        };
-
-        portfolioContainer.appendChild(portfolioElement);
-      });
-    };
-
-    const displayTestimonials = (testimonials) => {
-      const testimonialContainer = document.getElementById(
-        "testimonial-container"
-      );
-
-      testimonials.forEach((item) => {
-        const testimonialDiv = document.createElement("div");
-        testimonialDiv.className =
-          "bg-primaryLight p-4 rounded-xl swiper-slide";
-
-        testimonialDiv.innerHTML = `
-          <p class="mb-4 font-poppins">${item.message}</p>
-          <div class="flex items-center">
-            <img src="${item.imageUrl}" alt="${item.name}" class="size-12 rounded-full mr-4" />
-            <div>
-              <p class="font-poppins font-medium">${item.name}</p>
-              <p class="text-sm font-poppins font-medium text-primary">${item.designation}</p>
-            </div>
-          </div>
-        `;
-
-        testimonialContainer.appendChild(testimonialDiv);
-      });
-    };
-
-    const fetchAndDisplayDynamicData = () => {
-      fetch("./constants.json")
-        .then((response) => response.json())
-        .then((data) => {
-          displaySkills(data.skills);
-          displayPortfolio(data.portfolio);
-          displayTestimonials(data.testimonial);
-          setTimeout(() => {
-            initializeModals();
-          }, 2000);
-        })
-        .catch((error) =>
-          console.error("Error fetching the JSON file:", error)
-        );
-    };
-
-    const handleContactFormSubmission = () => {
-      const form = document.querySelector("form");
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const submitButton = form.querySelector("button");
-        submitButton.innerText = "Submitting...";
-        submitButton.disabled = true;
-
-        const data = new FormData(form);
-        fetch(
-          "https://script.google.com/macros/s/AKfycbw7XAqLhoXNliUzwTnEDSd06XLTsfxFy7zzOtnx86xIxTGW43t7nJJlgqRkNQqrU9E/exec",
-          {
-            method: "POST",
-            body: data,
-          }
-        )
-          .then((res) => res.text())
-          .then(() => {
-            form.reset();
-            submitButton.innerText = "Send Message";
-            submitButton.disabled = false;
-          });
-      });
-    };
-
-    document.addEventListener("DOMContentLoaded", () => {
-      initializeSwiper();
-      highlightActiveNavLink();
-      trackSectionTimeSpent();
-      setupHeaderMenu();
-      fetchAndDisplayDynamicData();
-      handleContactFormSubmission();
-    });
-
-    window.addEventListener("load", () => {
-      console.log("1229-> load");
-    });
-  </script>
+  <script src="./app.js"></script>
 </body>
 
 </html>
