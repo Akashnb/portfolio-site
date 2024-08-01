@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "A personal portfolio website showcasing the work and skills of Akash Bambhaniya.",
   "main": "index.js",
-  "url": "https://akashb.in/",
+  "author": "Akash Bambhaniya",
+  "author-email": "akash.dev.personal@gmail.com",
+  "author-website": "https://akashb.in/",
+  "homepage": "https://akashb.in/",
   "scripts": {
     "start": "tailwindcss -i ./custom.css -o ./public/output.css --watch"
   },
-  "author": "Akash Bambhaniya | akash.dev.personal@gmail.com | https://akashb.vercel.app/",
   "license": "ISC",
   "private": true,
   "dependencies": {},
@@ -20,6 +22,5 @@
   },
   "engines": {
     "node": ">=18.0.0"
-  },
-  "homepage": "https://akashb.vercel.app/"
+  }
 }
