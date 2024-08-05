@@ -310,6 +310,14 @@ const handleContactFormSubmission = () => {
         form.reset();
         submitButton.innerText = "Send Message";
         submitButton.disabled = false;
+        document
+          .getElementById("contact-success-notification")
+          .classList.remove("hidden");
+        setTimeout(() => {
+          document
+            .getElementById("contact-success-notification")
+            .classList.add("hidden");
+        }, 10000);
       });
   });
 };
