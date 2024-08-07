@@ -36,33 +36,6 @@ const updateActiveSlideBackground = () => {
   }
 };
 
-const initializeModals = () => {
-  const modals = [
-    {
-      background: "modal-background",
-      triggers: [
-        "modal-trigger1",
-        "modal-trigger2",
-        "modal-trigger3",
-        "modal-trigger4",
-      ],
-      closeBtn: "modal-close",
-    },
-  ];
-
-  modals.forEach((modal) => {
-    const modalBackground = document.getElementById(modal.background);
-    const closeModalBtn = document.getElementById(modal.closeBtn);
-    const openModal = () => modalBackground.classList.remove("hidden");
-    const closeModal = () => modalBackground.classList.add("hidden");
-
-    modal.triggers.forEach((triggerId) => {
-      document.getElementById(triggerId).addEventListener("click", openModal);
-    });
-    closeModalBtn.addEventListener("click", closeModal);
-  });
-};
-
 const highlightActiveNavLink = () => {
   const navLinks = document.querySelectorAll(".nav-link");
   const updateActiveLink = () => {
@@ -275,6 +248,34 @@ const displayTestimonials = (testimonials) => {
   });
 };
 
+const displayServices = (services) => {
+  const servicesContainer = document.getElementById("services-container");
+
+  console.log("281-> services", services);
+
+  services.forEach((item) => {
+    const serviceDiv = document.createElement("div");
+    serviceDiv.className =
+      "rounded-2xl px-6 pb-6 border-l-4 border-t-4 border-white hover:border-primary flex flex-col gap-2";
+
+    serviceDiv.innerHTML = `
+      <img src="${item.imageUrl}" class="w-[4rem]" alt="${item.title}" />
+          <h2 class="font-semibold text-md font-poppins">${item.title}</h2>
+          <p class="text-[0.85rem] font-poppins">
+          ${item.description}
+          </p>
+          <div id="modal-trigger3" class="flex items-center">
+            <div class="p-1 bg-primary size-2"></div>
+            <span
+              class="inline-block px-4 py-2 text-primary font-poppins text-left font-semibold rounded-md cursor-pointer">
+              Read More</span>
+          </div>
+    `;
+
+    servicesContainer.appendChild(serviceDiv);
+  });
+};
+
 const fetchAndDisplayDynamicData = () => {
   fetch("./constants.json")
     .then((response) => response.json())
@@ -282,9 +283,7 @@ const fetchAndDisplayDynamicData = () => {
       displaySkills(data.skills);
       displayPortfolio(data.portfolio);
       displayTestimonials(data.testimonial);
-      setTimeout(() => {
-        initializeModals();
-      }, 2000);
+      displayServices(data.services);
     })
     .catch((error) => console.error("Error fetching the JSON file:", error));
 };

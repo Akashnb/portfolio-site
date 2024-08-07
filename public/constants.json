@@ -1,4 +1,26 @@
 {
+  "services": [
+    {
+      "title": "Responsive Web Design",
+      "description": "I provide responsive web design services that ensure your website looks great on all devices. With a focus on user experience, I create visually appealing layouts that adapt seamlessly to any screen size.",
+      "imageUrl": "./Images/image-14.png"
+    },
+    {
+      "title": "Frontend Development",
+      "description": "I offer frontend development services using the latest technologies like React, Tailwind CSS, and more. Let me build fast, interactive web applications that deliver a smooth user experience and meet your business needs.",
+      "imageUrl": "./Images/image-13.png"
+    },
+    {
+      "title": "Performance Optimization",
+      "description": "I provide frontend performance optimization services to enhance your website's speed and efficiency. By implementing best practices and optimizing assets, I ensure your site loads quickly and keeps users engaged.",
+      "imageUrl": "./Images/image-16.png"
+    },
+    {
+      "title": "UI/UX Design",
+      "description": "Our team specializes in UI/UX design to create intuitive and engaging interfaces for your applications. We focus on enhancing user satisfaction through thoughtful design that prioritizes usability and aesthetics.",
+      "imageUrl": "./Images/image-15.png"
+    }
+  ],
   "testimonial": [
     {
       "name": "Upwork Client",
@@ -140,7 +162,7 @@
       "heading": "Personal Portfolio",
       "type": "Web design",
       "imageUrl": "./Images/portfolio/06.jpg",
-      "liveUrl": "https://akashb.vercel.app/",
+      "liveUrl": "https://akashb.in",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
       "tools": ["HTML", "CSS", "JavaScript", "ES6", "Responsive"]
     },
