@@ -28,7 +28,7 @@
   <meta name="twitter:image" content="https://akashb.in/Images/fav-icon.png" />
   <meta name="twitter:url" content="https://akashb.in/" />
 
-  <title>Akash Bambhaniya - Front End Developer Portfolio</title>
+  <title>Akash Bambhaniya - Front End Developer</title>
 
   <!-- Canonical Link -->
   <link rel="canonical" href="https://akashb.in/" />
@@ -348,21 +348,44 @@
     </div>
   </section>
 
-  <div id="modal-background"
-    class="fixed top-0 left-0 py-20 w-full flex justify-center items-center hidden bg-white z-50">
+  <!-- Decorative image -->
+  <div class="relative select-none pointer-events-none">
+    <img src="./Images/image-6.png" class="absolute right-0 w-16 top-2 md:w-20" alt="decorative-image" />
+  </div>
+  <!-- End -->
+
+  <section class="container mx-auto pt-28 sm:px-0 px-4" id="services">
+    <div class="flex flex-col gap-8">
+      <div class="w-full flex flex-col items-center">
+        <h1 class="font-bold text-gradient font-poppins text-3xl">
+          Services
+        </h1>
+        <p class="text-center font-poppins text-lg font-semibold">
+          Elevate Your Online Presence with Our Services
+        </p>
+      </div>
+
+      <div id="services-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Dynamic Services -->
+      </div>
+    </div>
+  </section>
+
+  <div id="service-modal" class="fixed top-0 left-0 py-20 w-full flex justify-center items-center hidden bg-white z-50">
     <div id="modal-content"
       class="bg-white p-6 shadow-2xl md:w-[75vw] max-h-[80vh] w-[95vw] rounded-xl px-10 overflow-y-scroll">
       <div class="w-100 flex justify-between items-center">
-        <span class="self-center font-bold whitespace-nowrap text-gradient font-poppins text-[1rem]">Web
+        <span class="self-center font-bold whitespace-nowrap text-gradient font-poppins text-base"
+          id="service-modal-title">Web
           Development</span>
-        <button id="modal-close">
+        <button id="service-modal-close">
           <img src="./Images/image-7.png" alt="web development" />
         </button>
       </div>
       <div class="bg-cover bg-no-repeat w-full md:h-96 h-44 mt-5"
         style="background-image: url('./Images/portfolio/06.jpg')"></div>
       <p class="font-poppins font-medium mt-5">Our Capabilities</p>
-      <p class="font-poppins font-medium mt-5">
+      <p class="font-poppins font-medium mt-5" id="service-modal-description">
         Crafting responsive and dynamic websites tailored to your needs, from
         engaging landing pages to robust e-commerce platforms. We use the
         latest technologies and best practices to ensure optimal performance,
@@ -455,29 +478,6 @@
 
   <!-- Decorative image -->
   <div class="relative select-none pointer-events-none">
-    <img src="./Images/image-6.png" class="absolute right-0 w-16 top-2 md:w-20" alt="decorative-image" />
-  </div>
-  <!-- End -->
-
-  <section class="container mx-auto pt-28 sm:px-0 px-4" id="services">
-    <div class="flex flex-col gap-8">
-      <div class="w-full flex flex-col items-center">
-        <h1 class="font-bold text-gradient font-poppins text-3xl">
-          Services
-        </h1>
-        <p class="text-center font-poppins text-lg font-semibold">
-          Elevate Your Online Presence with Our Services
-        </p>
-      </div>
-
-      <div id="services-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <!-- Dynamic Services -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Decorative image -->
-  <div class="relative select-none pointer-events-none">
     <img src="./Images/sparks.png" class="absolute w-44 sm:w-60 left-[-5rem] top-[-2rem]" alt="decorative-image" />
   </div>
   <!-- End -->
@@ -558,7 +558,7 @@
     class="fixed top-0 left-0 py-20 w-full flex justify-center items-center hidden bg-white z-50">
     <div class="bg-white p-6 shadow-2xl md:w-[75vw] max-h-[80vh] w-[95vw] rounded-xl px-10 overflow-y-scroll">
       <div class="w-100 flex justify-between items-center">
-        <p class="self-center font-bold whitespace-nowrap text-gradient font-poppins text-[1rem]">
+        <p class="self-center font-bold whitespace-nowrap text-gradient font-poppins text-base">
           My Amazing Work
         </p>
         <button id="portfolio-modal-close">

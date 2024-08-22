@@ -250,8 +250,24 @@ const displayTestimonials = (testimonials) => {
 
 const displayServices = (services) => {
   const servicesContainer = document.getElementById("services-container");
+  const htmlTag = document.querySelector("html");
+  const serviceModal = document.getElementById("service-modal");
 
-  console.log("281-> services", services);
+  const closeModal = () => {
+    serviceModal.classList.add("hidden");
+    htmlTag.classList.remove("overflow-hidden");
+  };
+
+  const openModal = (item) => {
+    serviceModal.querySelector("#service-modal-title").innerText = item.title;
+    serviceModal.querySelector("#service-modal-description").innerText =
+      item.description;
+
+    serviceModal.classList.remove("hidden");
+    htmlTag.classList.add("overflow-hidden");
+  };
+
+  serviceModal.querySelector("#service-modal-close").onclick = closeModal;
 
   services.forEach((item) => {
     const serviceDiv = document.createElement("div");
@@ -266,13 +282,19 @@ const displayServices = (services) => {
           </p>
           <div id="modal-trigger3" class="flex items-center">
             <div class="p-1 bg-primary size-2"></div>
-            <span
-              class="inline-block px-4 py-2 text-primary font-poppins text-left font-semibold rounded-md cursor-pointer">
-              Read More</span>
+            <button
+              id="read-more-btn"
+              class="px-4 py-2 text-primary font-poppins text-left font-semibold rounded-md cursor-pointer">
+              Read More</button>
           </div>
     `;
 
     servicesContainer.appendChild(serviceDiv);
+
+    const readMoreBtn = serviceDiv.querySelector("#read-more-btn");
+    readMoreBtn.addEventListener("click", () => {
+      openModal(item);
+    });
   });
 };
 
