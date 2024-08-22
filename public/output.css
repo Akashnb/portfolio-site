@@ -746,10 +746,6 @@ video {
   display: block;
 }
 
-.inline-block {
-  display: inline-block;
-}
-
 .flex {
   display: flex;
 }
@@ -1312,10 +1308,6 @@ video {
 
 .text-\[0\.85rem\] {
   font-size: 0.85rem;
-}
-
-.text-\[1rem\] {
-  font-size: 1rem;
 }
 
 .text-base {
