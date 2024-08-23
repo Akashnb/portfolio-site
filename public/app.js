@@ -144,8 +144,10 @@ const displayPortfolio = (portfolio) => {
       item.heading;
     portfolioModal.querySelector("#portfolio-project-type").innerText =
       item.type;
-    portfolioModal.querySelector("#portfolio-project-description").innerText =
-      item.description;
+    portfolioModal.querySelector("#portfolio-project-details").innerText =
+      item.projectDetails;
+    portfolioModal.querySelector("#portfolio-project-myrole").innerText =
+      item.myRole;
 
     portfolioModal.classList.remove("hidden");
     htmlTag.classList.add("overflow-hidden");
