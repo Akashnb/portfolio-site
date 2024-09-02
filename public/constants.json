@@ -41,28 +41,10 @@
       "message": "Akash's web design skill is excellent. He is also involved in developing our company's websites."
     },
     {
-      "name": "Vipul Limbachiya",
-      "designation": "CEO at UpforceTech",
-      "imageUrl": "./Images/image-5.png",
-      "message": "Coming Soon......"
-    },
-    {
       "name": "Vishal Sherathiya",
       "designation": "CEO at Techanzo",
       "imageUrl": "./Images/image-5.png",
       "message": " I worked with Akash for around 4 years. His development and team management skills are unmeasurable. He provided daily updates on top of good communication."
-    },
-    {
-      "name": "Prasanna Sreenivas",
-      "designation": "CEO at Skill Instill Technologies",
-      "imageUrl": "./Images/image-5.png",
-      "message": "Coming Soon......"
-    },
-    {
-      "name": "Raghu Kiran",
-      "designation": "MD at SpaceAge Labs",
-      "imageUrl": "./Images/image-5.png",
-      "message": "Coming Soon......"
     }
   ],
   "skills": [
