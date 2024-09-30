@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Meta Tags for SEO -->
+    <meta name="description"
+        content="Akash Bambhaniya's personal portfolio. Front End Developer specializing in React.js, creating exceptional digital experiences." />
+    <meta name="keywords"
+        content="Front End Developer, React.js, Node.js, Web Development, Portfolio, Akash Bambhaniya" />
+    <meta name="author" content="Akash Bambhaniya" />
+
+    <!-- Open Graph Meta Tags for Social Media Sharing -->
+    <meta property="og:title" content="Akash Bambhaniya's personal portfolio" />
+    <meta property="og:description"
+        content="Akash Bambhaniya's personal portfolio. Front End Developer specializing in React.js, creating exceptional digital experiences." />
+    <meta property="og:image" content="https://akashb.in/Images/fav-icon.png" />
+    <meta property="og:url" content="https://akashb.in/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="https://akashb.in/" />
+    <meta name="twitter:title" content="Akash Bambhaniya's personal portfolio" />
+    <meta name="twitter:description"
+        content="Akash Bambhaniya's personal portfolio. Front End Developer specializing in React.js, creating exceptional digital experiences." />
+    <meta name="twitter:image" content="https://akashb.in/Images/fav-icon.png" />
+    <meta name="twitter:url" content="https://akashb.in/" />
+
+    <title>Akash Bambhaniya - Resume</title>
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://akashb.in/" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="./Images/fav-icon.png" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4FJ3TE5SS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "G-Y4FJ3TE5SS");
+
+        // Function to send event data to Google Analytics
+        function trackEvent(eventCategory, eventAction, eventLabel) {
+            gtag("event", eventAction, {
+                event_category: eventCategory,
+                event_label: eventLabel,
+            });
+        }
+    </script>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <iframe src="./pdf/Akash - React.js - 6 Years exp.pdf"
+        onerror="document.getElementById('fallback-text').style.display = 'block';"></iframe>
+
+    <div class=" fallback" id="fallback-text" style="display: none;">
+        Oops! It seems your browser doesn't support inline PDFs.
+        <a href="./pdf/Akash - React.js - 6 Years exp.pdf" download>Click here to download the resume.</a>
+    </div>
+</body>
+
+</html>
