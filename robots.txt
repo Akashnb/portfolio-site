@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://akashb.in/sitemap.xml
