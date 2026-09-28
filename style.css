@@ -322,7 +322,7 @@ p{ margin:0; }
 
 .hero-desc{
   margin-top:1.5rem;
-  max-width:46ch;
+  max-width:25rem;
   color:var(--text-muted);
   font-size:1.02rem;
 }
@@ -612,7 +612,7 @@ p{ margin:0; }
   border-top:1px solid var(--border);
 }
 
-.section-head{ max-width:52ch; margin-bottom:clamp(2.25rem,5vw,3.5rem); }
+.section-head{ max-width:100%; width:100%; margin-bottom:clamp(2.25rem,5vw,3.5rem); }
 .section-tag{
   font-family:var(--font-mono);
   font-size:0.8rem;
@@ -638,7 +638,7 @@ p{ margin:0; }
 .about-body{ padding-top:0.35rem; }
 .about-text{
   color:var(--text-muted);
-  max-width:60ch;
+  max-width:33rem;
   font-size:1.02rem;
 }
 .about-list{
@@ -736,7 +736,7 @@ p{ margin:0; }
   margin-top:0.75rem;
   font-size:0.94rem;
   color:var(--text-muted);
-  max-width:56ch;
+  max-width:30.5rem;
 }
 
 /* =========================================================
@@ -1087,7 +1087,7 @@ p{ margin:0; }
    Contact
 ========================================================= */
 .contact-head{
-  max-width:56ch;
+  max-width:100%;
   margin-left:auto;
   margin-right:auto;
   text-align:center;
