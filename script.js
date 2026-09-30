@@ -9,6 +9,8 @@
 
    Sections:
      0. Shared settings (things every feature below checks first)
+     0.5 Dynamic years of experience → reads [data-dynamic="exp-years-…"]
+         (also fills the footer year from [data-dynamic="year"])
      1. Ambient particle network      → creates its own <canvas>
      2. Custom cursor glow            → creates its own <div>
      3. Animated stat counters        → reads .stat-number in index.html
@@ -37,6 +39,65 @@
   // matter. Below this, the particle network still runs, just lighter
   // and without mouse interaction (see PARTICLE_COUNT below).
   const isDesktopViewport = !isTouchDevice && window.innerWidth > 768;
+
+  /* ===================================================================
+     0.5 DYNAMIC YEARS OF EXPERIENCE
+     One place to update if the career start date ever changes.
+     Every "Eight years" / "8+" figure on the page is computed from
+     this single date instead of being hand-typed in multiple spots.
+
+     EXPERIENCE_START — first day of the earliest role on the site
+     (Web Designer, Vytech Enterprise, May 2018). Update only this
+     line if that changes; everything else recalculates on its own.
+  =================================================================== */
+  const EXPERIENCE_START = new Date(2018, 4, 1); // May 1, 2018 (month is 0-indexed)
+
+  const YEAR_WORDS = [
+    'Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight',
+    'Nine', 'Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen',
+    'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen', 'Twenty',
+  ];
+
+  function getYearsOfExperience() {
+    const now = new Date();
+    let years = now.getFullYear() - EXPERIENCE_START.getFullYear();
+    const hadAnniversaryThisYear =
+      now.getMonth() > EXPERIENCE_START.getMonth() ||
+      (now.getMonth() === EXPERIENCE_START.getMonth() &&
+        now.getDate() >= EXPERIENCE_START.getDate());
+    if (!hadAnniversaryThisYear) years -= 1;
+    return Math.max(years, 0);
+  }
+
+  function yearsToWord(years) {
+    return YEAR_WORDS[years] || `${years}+`;
+  }
+
+  function initExperienceYears() {
+    const years = getYearsOfExperience();
+    const word = yearsToWord(years);
+
+    // Text spots that read "Eight years" — hero intro, about bio,
+    // and the experience section heading.
+    document.querySelectorAll('[data-dynamic="exp-years-word"]').forEach((el) => {
+      el.textContent = `${word} years`;
+    });
+
+    // The animated "Years Experience" stat counts up to this number
+    // instead of a hard-coded data-count value.
+    const expStat = document.querySelector('[data-dynamic="exp-years-count"]');
+    if (expStat) {
+      expStat.dataset.count = String(years);
+      // Keep the static text in sync too, so reduced-motion / no-observer
+      // visitors see the current value without any animation running.
+      expStat.textContent = years + (expStat.dataset.suffix || '');
+    }
+
+    // Footer copyright year
+    document.querySelectorAll('[data-dynamic="year"]').forEach((el) => {
+      el.textContent = String(new Date().getFullYear());
+    });
+  }
 
   /* A tiny stylesheet the script injects itself, so this JS file can
      be dropped onto the page without also editing style.css. It only
@@ -288,21 +349,27 @@
   /* ===================================================================
      3. ANIMATED STAT COUNTERS
      Connects to the three <p class="stat-number" data-count="…">
-     elements inside #stats in index.html. Each one counts from 0 up
-     to its data-count value the first time it scrolls into view.
+     elements inside #stats in index.html. The real values ("8+",
+     "10+", "5+") are written in the HTML itself, so crawlers, no-JS
+     visitors and reduced-motion users always see the final numbers.
+     Only when motion is allowed does this script reset them to 0 and
+     count up the first time they scroll into view.
   =================================================================== */
   function initStatCounters() {
     const statNumbers = document.querySelectorAll('.stat-number');
     if (!statNumbers.length) return;
 
+    // Nothing to animate: leave the final values from the HTML alone.
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) return;
+
+    // Motion is allowed: start from 0 so the count-up has somewhere to go.
+    statNumbers.forEach((el) => {
+      el.textContent = '0' + (el.dataset.suffix || '');
+    });
+
     function animateCount(el) {
       const target = parseInt(el.dataset.count, 10) || 0;
       const suffix = el.dataset.suffix || '';
-
-      if (prefersReducedMotion) {
-        el.textContent = target + suffix; // jump straight to the end value
-        return;
-      }
 
       const duration = 1200;
       const startTime = performance.now();
@@ -337,7 +404,7 @@
      4. SMOOTH-SCROLL NAV + ACTIVE LINK HIGHLIGHT
      Connects to the <a class="nav-link" href="#…"> links inside
      #main-nav, and to the section each one points to (#about,
-     #experience, #services, #skills, #work…) in index.html.
+     #experience, #services…) in index.html.
   =================================================================== */
   function initSmoothScrollNav() {
     const header = document.querySelector('.site-header');
@@ -468,6 +535,7 @@
   =================================================================== */
   function init() {
     injectRuntimeStyles();
+    initExperienceYears();
     initParticleNetwork();
     initCursorGlow();
     initStatCounters();

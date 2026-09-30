@@ -47,6 +47,10 @@
   "name": "Akash Bambhaniya",
   "jobTitle": "Senior Frontend Engineer",
   "url": "https://akashb.in/",
+  "sameAs": [
+    "https://www.linkedin.com/in/akash-bambhaniya/",
+    "https://github.com/Akashnb"
+  ],
   "email": "mailto:akashnb97@gmail.com",
   "telephone": "+91-72849-05540",
   "address": {
@@ -85,7 +89,7 @@
     <nav class="main-nav" id="main-nav">
       <a href="#about" class="nav-link">About</a>
       <a href="#experience" class="nav-link">Experience</a>
-      <a href="#work" class="nav-link">Work</a>
+      <a href="#services" class="nav-link">Services</a>
       <a href="#contact" class="nav-link nav-link--cta">Contact</a>
     </nav>
 
@@ -115,20 +119,20 @@
         <p class="hero-desc">
           I build front-end systems that hold up under real traffic —
           precise interfaces, clean component architecture, and
-          interactions that feel instant. Eight years deep in React.js,
-          Next.js, and TypeScript — these days building scalable
-          dashboards and data-heavy interfaces — paired with
-          AI-assisted workflows to ship products faster without
-          cutting corners on quality.
+          interactions that feel instant. <span data-dynamic="exp-years-word">Eight years</span> deep in React.js,
+          Next.js, and TypeScript — these days that also means reviewing
+          what AI generates, catching what it misses, and making the
+          architecture and quality calls that keep a product trustworthy
+          once it ships.
         </p>
 
         <div class="hero-actions">
-          <a href="#work" class="btn btn--primary">
-            <span>View Work</span>
+          <a href="#experience" class="btn btn--primary">
+            <span>View Experience</span>
           </a>
           <a href="#contact" class="btn btn--ghost">
             <span class="btn-caret">&gt;</span>
-            <span>Initialize Contact</span>
+            <span>Get in touch</span>
           </a>
         </div>
       </div>
@@ -166,17 +170,17 @@
     <div class="stats-inner">
 
       <div class="stat-card">
-        <p class="stat-number" data-count="8" data-suffix="+">0</p>
+        <p class="stat-number" data-dynamic="exp-years-count" data-count="8" data-suffix="+">8+</p>
         <p class="stat-label">Years Experience</p>
       </div>
 
       <div class="stat-card">
-        <p class="stat-number" data-count="10" data-suffix="+">0</p>
+        <p class="stat-number" data-count="10" data-suffix="+">10+</p>
         <p class="stat-label">Completed Projects</p>
       </div>
 
       <div class="stat-card">
-        <p class="stat-number" data-count="5" data-suffix="+">0</p>
+        <p class="stat-number" data-count="5" data-suffix="+">5+</p>
         <p class="stat-label">Lead Projects</p>
       </div>
 
@@ -194,39 +198,43 @@
 
       <div class="about-body">
         <p class="about-text">
-          I'm Akash — a Senior Frontend Engineer based in Gujarat, India,
-          eight years into building web applications that hold up under
-          real users and real deadlines. I'm currently at Turing, building
+          Senior Frontend Engineer leveraging AI to solve real business
+          problems — not by building autonomous agents, but by using AI
+          where it actually saves time: scaffolding, debugging,
+          refactoring, and reviewing code before it ships.
+        </p>
+
+        <p class="about-text">
+          <span data-dynamic="exp-years-word">Eight years</span> into building web applications that hold up under
+          real users and real deadlines. Currently at Turing, building
           scalable dashboards, admin panels, and data-heavy interfaces —
           interactive charts, maps, and real-time visualizations — in
-          React.js, Next.js, and TypeScript. What started as curiosity
-          about how websites work turned into a career built almost
-          entirely on React and a habit of caring more than the brief
-          requires. These days that also means building alongside AI —
-          using it to move faster through the repetitive parts of the job
-          so more time goes into the decisions that actually need a human.
+          React.js, Next.js, and TypeScript. These days, less of the
+          work is writing the first line of code and more the decisions
+          around it — what to build, what AI can safely generate, and
+          what still needs a second pair of eyes.
         </p>
 
         <ul class="about-list">
           <li class="about-list-item">
-            <span class="about-list-key">HTML5 &amp; CSS3</span>
-            <span class="about-list-desc">Semantic, accessible layouts built to survive the next redesign.</span>
+            <span class="about-list-key">Architecture &amp; Technical Decisions</span>
+            <span class="about-list-desc">Choosing the right approach before code gets written, not after it breaks in production.</span>
           </li>
           <li class="about-list-item">
-            <span class="about-list-key">JavaScript (ES6+)</span>
-            <span class="about-list-desc">Modern patterns, applied without unnecessary abstraction.</span>
+            <span class="about-list-key">AI Output Review</span>
+            <span class="about-list-desc">Reading what the model wrote before it ships — security gaps, bad patterns, and edge cases it missed.</span>
           </li>
           <li class="about-list-item">
-            <span class="about-list-key">React.js</span>
-            <span class="about-list-desc">Component architecture that scales with the team, not against it.</span>
+            <span class="about-list-key">Production Debugging</span>
+            <span class="about-list-desc">Diagnosing a live failure with incomplete logs and no clear repro steps.</span>
           </li>
           <li class="about-list-item">
-            <span class="about-list-key">Tailwind &amp; Material UI</span>
-            <span class="about-list-desc">Interfaces that feel considered, not assembled from a kit.</span>
+            <span class="about-list-key">Requirements Translation</span>
+            <span class="about-list-desc">Turning a vague ask from product or a client into a spec an engineer — or an AI — can actually build.</span>
           </li>
           <li class="about-list-item">
-            <span class="about-list-key">AI-Augmented Workflow</span>
-            <span class="about-list-desc">Copilot and LLMs for scaffolding, testing, and code review — human judgment on architecture and UX.</span>
+            <span class="about-list-key">React.js &amp; TypeScript</span>
+            <span class="about-list-desc">Still where most of it gets built — component architecture that scales with the team, not against it.</span>
           </li>
         </ul>
       </div>
@@ -240,7 +248,7 @@
 
       <div class="section-head">
         <p class="section-tag">// experience</p>
-        <h2 class="section-title">Eight years, four chapters.</h2>
+        <h2 class="section-title"><span data-dynamic="exp-years-word">Eight years</span>, four chapters.</h2>
       </div>
 
       <ol class="timeline">
@@ -251,7 +259,7 @@
             <p class="timeline-period">Apr 2025 — Present</p>
             <h3 class="timeline-role">Senior Frontend Engineer</h3>
             <p class="timeline-meta">Turing · Full-time · Remote</p>
-            <p class="timeline-desc">Building scalable dashboards and data-heavy interfaces — interactive charts, maps, and real-time visualizations — in React.js, Next.js, and TypeScript.</p>
+            <p class="timeline-desc">Building scalable dashboards and data-heavy interfaces — interactive charts, maps, and real-time visualizations — in React.js, Next.js, and TypeScript, with architecture decisions and AI-generated code review as part of the job.</p>
           </div>
         </li>
 
@@ -326,50 +334,43 @@
     <div class="section-inner">
 
       <div class="section-head">
-        <p class="section-tag">// capabilities</p>
-        <h2 class="section-title">Where I add the most value.</h2>
+        <p class="section-tag">// services</p>
+        <h2 class="section-title">Where I turn technology into product value.</h2>
+        <p class="section-sub">AI can generate the code. What a senior engineer still brings is the judgment — the right architecture, a careful read of what the model got wrong, and a translation of business needs into something that actually ships.</p>
       </div>
 
       <div class="services-grid">
 
         <div class="service-card">
           <span class="service-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="14" height="10" rx="1.5"/><path d="M2 17h14"/><rect x="17.5" y="8" width="4.5" height="9" rx="1"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="2.4"/><path d="M12 3v3.2M12 17.8V21M21 12h-3.2M6.2 12H3M18.4 5.6l-2.3 2.3M7.9 16.1l-2.3 2.3M18.4 18.4l-2.3-2.3M7.9 7.9 5.6 5.6"/></svg>
           </span>
-          <h3 class="service-title">Responsive Web Design</h3>
-          <p class="service-desc">Layouts built fluid from the first line of CSS — one codebase, correct from phone to ultrawide.</p>
+          <h3 class="service-title">Architecture &amp; Technical Decisions</h3>
+          <p class="service-desc">I choose the approach before code gets written — state, data flow, and structure that hold up as the product grows, not just the first release.</p>
         </div>
 
         <div class="service-card">
           <span class="service-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 5 2 12l6 7"/><path d="M16 5l6 7-6 7"/><path d="M13.5 3.5l-3 17"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12.5 11 14.5 15.5 9.5"/><path d="M12 3.5 19.5 7v5.5c0 4.2-3 7.3-7.5 8.5-4.5-1.2-7.5-4.3-7.5-8.5V7L12 3.5Z"/></svg>
           </span>
-          <h3 class="service-title">Front-End Development</h3>
-          <p class="service-desc">React component architecture that stays readable at scale, with state that behaves the way you'd expect.</p>
+          <h3 class="service-title">AI Output Verification &amp; Code Review</h3>
+          <p class="service-desc">I review what AI generates before it ships — catching security gaps, bad patterns, and edge cases the model missed, so shipping fast doesn't mean shipping risk.</p>
         </div>
 
         <div class="service-card">
           <span class="service-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 20V10M9 20V4M15 20v-7M21 20V8"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 13h4l2-7 4 14 2-9h4"/></svg>
           </span>
-          <h3 class="service-title">Performance Optimization</h3>
-          <p class="service-desc">Bundle audits, lazy-loading, and render profiling — turning sluggish builds into fast, measurable wins.</p>
+          <h3 class="service-title">Production Debugging &amp; Incident Response</h3>
+          <p class="service-desc">I diagnose live failures with incomplete logs and no clear repro steps, and get products back to stable without guesswork.</p>
         </div>
 
         <div class="service-card">
           <span class="service-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><circle cx="12" cy="12" r="4.5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h10l4 4v12H4V4Z"/><path d="M14 4v4h4"/><path d="m9 14 2 2 4-4"/></svg>
           </span>
-          <h3 class="service-title">UI/UX Design</h3>
-          <p class="service-desc">Wireframes and interaction details worked out before code, so the build matches the intent.</p>
-        </div>
-
-        <div class="service-card">
-          <span class="service-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M4.2 7.8l2.6 1.5M17.2 14.7l2.6 1.5M4.2 16.2l2.6-1.5M17.2 9.3l2.6-1.5"/></svg>
-          </span>
-          <h3 class="service-title">AI-Augmented Development</h3>
-          <p class="service-desc">Copilot and LLMs for scaffolding, refactors, and test coverage — shipping faster while keeping architecture and code quality under human review.</p>
+          <h3 class="service-title">Requirements Translation</h3>
+          <p class="service-desc">I turn a vague ask from product or a client into a spec an engineer — or an AI — can actually build, so less gets lost between the idea and the build.</p>
         </div>
 
       </div>
@@ -377,7 +378,7 @@
   </section>
 
   <!-- ============ TECH STACK ============ -->
-  <section class="section stack" id="skills">
+  <section class="section stack" id="stack">
     <div class="section-inner">
 
       <div class="section-head">
@@ -394,79 +395,37 @@
         <div class="chip"><span class="chip-mono">N.</span><span class="chip-label">Next.js</span></div>
         <div class="chip"><span class="chip-mono">Rx</span><span class="chip-label">Redux</span></div>
         <div class="chip"><span class="chip-mono">git</span><span class="chip-label">Git</span></div>
+        <div class="chip"><span class="chip-mono">SD</span><span class="chip-label">System Design</span></div>
+        <div class="chip"><span class="chip-mono">CR</span><span class="chip-label">Code Review</span></div>
         <div class="chip"><span class="chip-mono">AI</span><span class="chip-label">AI-Assisted Dev</span></div>
       </div>
 
     </div>
   </section>
 
-  <!-- ============ PROJECTS ============ -->
-  <section class="section projects" id="work">
+  <!-- ============ FEATURED REPOS (template, not live) ============
+       To enable: fill in 2-3 real repos, remove this comment wrapper,
+       and add <a href="#repos" class="nav-link">Open Source</a> to the nav.
+
+  <section class="section repos" id="repos">
     <div class="section-inner">
-
       <div class="section-head">
-        <p class="section-tag">// selected-work</p>
-        <h2 class="section-title">A few things I've shipped.</h2>
+        <p class="section-tag">// open-source</p>
+        <h2 class="section-title">Code you can read.</h2>
       </div>
-
-      <div class="projects-grid">
-
-        <article class="project-card" style="--accent:var(--cyan);">
-          <div class="project-thumb"><span class="project-mono">AC</span></div>
-          <div class="project-overlay">
-            <div class="project-tags">
-              <span class="project-tag">React</span>
-              <span class="project-tag">REST API</span>
-              <span class="project-tag">Redux</span>
-            </div>
-            <h3 class="project-title">Acadly</h3>
-            <p class="project-desc">Classroom engagement platform — live attendance, polls, and Q&amp;A for university lectures.</p>
-            <a href="#" class="project-link">Live Preview <span aria-hidden="true">↗</span></a>
+      <div class="education-grid">
+        <article class="education-card">
+          <h3 class="education-degree"><a href="https://github.com/Akashnb/REPO_NAME" target="_blank" rel="noopener noreferrer">REPO_NAME</a></h3>
+          <p class="education-school">One line on what it does and why it matters.</p>
+          <div class="education-meta">
+            <span class="education-period">TypeScript</span>
+            <span class="education-grade">Live demo: https://example.com</span>
           </div>
         </article>
-
-        <article class="project-card" style="--accent:var(--violet);">
-          <div class="project-thumb"><span class="project-mono">RK</span></div>
-          <div class="project-overlay">
-            <div class="project-tags">
-              <span class="project-tag">React</span>
-              <span class="project-tag">Tailwind</span>
-            </div>
-            <h3 class="project-title">RK Water</h3>
-            <p class="project-desc">Marketing and order site for a water-purification business, built for fast mobile browsing.</p>
-            <a href="#" class="project-link">Live Preview <span aria-hidden="true">↗</span></a>
-          </div>
-        </article>
-
-        <article class="project-card" style="--accent:var(--cyan);">
-          <div class="project-thumb"><span class="project-mono">GG</span></div>
-          <div class="project-overlay">
-            <div class="project-tags">
-              <span class="project-tag">JavaScript</span>
-              <span class="project-tag">CMS</span>
-            </div>
-            <h3 class="project-title">Gauttam Gaushala</h3>
-            <p class="project-desc">Donation and awareness site for a cattle-shelter trust, with a lightweight admin panel.</p>
-            <a href="#" class="project-link">Live Preview <span aria-hidden="true">↗</span></a>
-          </div>
-        </article>
-
-        <article class="project-card" style="--accent:var(--violet);">
-          <div class="project-thumb"><span class="project-mono">IH</span></div>
-          <div class="project-overlay">
-            <div class="project-tags">
-              <span class="project-tag">React</span>
-              <span class="project-tag">Charts</span>
-            </div>
-            <h3 class="project-title">Invest Here</h3>
-            <p class="project-desc">Investor-facing dashboard for tracking portfolio performance across property listings.</p>
-            <a href="#" class="project-link">Live Preview <span aria-hidden="true">↗</span></a>
-          </div>
-        </article>
-
       </div>
     </div>
   </section>
+  ============================================================== -->
 
   <!-- ============ TESTIMONIALS ============ -->
   <section class="section testimonials" id="testimonials">
@@ -577,11 +536,13 @@
       </div>
 
       <div class="contact-socials contact-socials--center">
-        <a href="https://www.linkedin.com/in/akash-bambhaniya/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn profile">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7.5 10.5v6M7.5 7.5v.01M12 16.5v-3.7c0-1.5 1-2.3 2.2-2.3 1.2 0 1.8.9 1.8 2.3v3.7"/></svg>
+        <a href="https://www.linkedin.com/in/akash-bambhaniya/" target="_blank" rel="noopener noreferrer" class="social-link social-link--labeled">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7.5 10.5v6M7.5 7.5v.01M12 16.5v-3.7c0-1.5 1-2.3 2.2-2.3 1.2 0 1.8.9 1.8 2.3v3.7"/></svg>
+          <span>LinkedIn</span>
         </a>
-        <a href="https://github.com/Akashnb" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub profile">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2a10 10 0 0 0-3.16 19.5c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.1.39-2 1.03-2.7-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.9-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.7 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+        <a href="https://github.com/Akashnb" target="_blank" rel="noopener noreferrer" class="social-link social-link--labeled">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.5c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.1.39-2 1.03-2.7-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.9-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.7 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+          <span>GitHub</span>
         </a>
       </div>
 
@@ -595,14 +556,7 @@
 
   <div class="footer-inner">
     <a href="#top" class="logo">AB<span class="logo-dot">.</span></a>
-    <div class="footer-socials">
-      <a href="https://www.linkedin.com/in/akash-bambhaniya/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn profile">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7.5 10.5v6M7.5 7.5v.01M12 16.5v-3.7c0-1.5 1-2.3 2.2-2.3 1.2 0 1.8.9 1.8 2.3v3.7"/></svg>
-      </a>
-      <a href="https://github.com/Akashnb" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub profile">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2a10 10 0 0 0-3.16 19.5c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.1.39-2 1.03-2.7-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.9-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.7 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
-      </a>
-    </div>
+    <p class="footer-copy">&copy; <span data-dynamic="year">2026</span> Akash Bambhaniya</p>
   </div>
 </footer>
 
