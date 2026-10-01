@@ -4,7 +4,6 @@
   var GA_ID = 'G-Y4FJ3TE5SS';
   var ALLOWED_HOSTS = ['akashb.in', 'www.akashb.in'];
 
-  if (GA_ID === 'G-Y4FJ3TE5SS') return;
   if (ALLOWED_HOSTS.indexOf(location.hostname) === -1) return;
   if (navigator.doNotTrack === '1' || window.doNotTrack === '1') return;
 
