@@ -17,7 +17,8 @@
      4. Smooth-scroll nav + active link → reads .nav-link / #main-nav
      5. Mobile nav toggle             → reads #nav-toggle / #main-nav
      6. Scroll-to-top button          → reads #scroll-top
-     7. Boot everything once the DOM is ready
+     7. Scroll-reveal animations      → fades in cards, headings, text
+     8. Boot everything once the DOM is ready
 ===================================================================== */
 
 (function () {
@@ -404,7 +405,9 @@
      4. SMOOTH-SCROLL NAV + ACTIVE LINK HIGHLIGHT
      Connects to the <a class="nav-link" href="#…"> links inside
      #main-nav, and to the section each one points to (#about,
-     #experience, #services…) in index.html.
+     #experience, #services, #contact…) in index.html.
+     "Contact" and "Hire Me" both scroll to #contact; only the plain
+     "Contact" link gets the active underline (the first match below).
   =================================================================== */
   function initSmoothScrollNav() {
     const header = document.querySelector('.site-header');
@@ -434,9 +437,14 @@
     });
 
     // --- highlight whichever section is currently in view ---
-    const sections = Array.from(navLinks)
-      .map((link) => document.querySelector(link.getAttribute('href')))
-      .filter(Boolean); // drops any link whose section doesn't exist yet
+    // "Contact" and "Hire Me" both point at #contact, so de-duplicate.
+    const sections = Array.from(
+      new Set(
+        Array.from(navLinks).map((link) =>
+          document.querySelector(link.getAttribute('href'))
+        )
+      )
+    ).filter(Boolean); // drops any link whose section doesn't exist yet
 
     if (!sections.length) return;
 
@@ -527,7 +535,70 @@
   }
 
   /* ===================================================================
-     7. BOOT
+     7. SCROLL-REVEAL ANIMATIONS
+     Fades each block in and slides it up 30px the first time it
+     scrolls into view (CSS lives at the end of style.css). Elements
+     that enter the viewport together are staggered 0.1s apart.
+     Reveals once only, then strips its own classes so the element's
+     normal hover styles work again. Skipped entirely for visitors who
+     prefer reduced motion, and content stays visible if JS is off,
+     because the hidden state is only ever added from here.
+  =================================================================== */
+  const REVEAL_SELECTORS = [
+    '.stat-card',
+    '.section-head',
+    '.about-text',
+    '.about-list-item',
+    '.timeline-item',
+    '.education-card',
+    '.service-card',
+    '.chip',
+    '.testimonial-card',
+    '.contact-card',
+    '.contact-socials',
+  ].join(',');
+
+  const REVEAL_DURATION_MS = 600;
+  const REVEAL_STAGGER_MS = 100;
+  const REVEAL_MAX_DELAY_MS = 600; // so a long row of chips doesn't crawl in
+
+  function initScrollReveal() {
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) return;
+
+    const items = document.querySelectorAll(REVEAL_SELECTORS);
+    if (!items.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        // Everything that crossed the threshold in this same pass is
+        // revealed as one batch, staggered in document order.
+        const batch = entries.filter((en) => en.isIntersecting);
+        batch.forEach((entry, i) => {
+          const el = entry.target;
+          observer.unobserve(el);
+
+          const delay = Math.min(i * REVEAL_STAGGER_MS, REVEAL_MAX_DELAY_MS);
+          el.style.setProperty('--reveal-delay', delay + 'ms');
+          el.classList.add('is-visible');
+
+          // Hand the element back to its own CSS once the animation ends.
+          window.setTimeout(() => {
+            el.classList.remove('reveal', 'is-visible');
+            el.style.removeProperty('--reveal-delay');
+          }, delay + REVEAL_DURATION_MS + 50);
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -6% 0px' }
+    );
+
+    items.forEach((el) => {
+      el.classList.add('reveal');
+      observer.observe(el);
+    });
+  }
+
+  /* ===================================================================
+     8. BOOT
      Run everything once the DOM is ready. Because this script is
      loaded at the end of <body> in index.html, the DOM is usually
      already parsed by the time this file runs — but this check
@@ -542,6 +613,7 @@
     initSmoothScrollNav();
     initMobileNavToggle();
     initScrollTopButton();
+    initScrollReveal();
   }
 
   if (document.readyState === 'loading') {
