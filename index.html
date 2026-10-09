@@ -7,9 +7,10 @@
 <meta name="description" content="Akash Bambhaniya, Senior Frontend Engineer with 8+ years building scalable dashboards and data-heavy interfaces in React.js, Next.js, and TypeScript — AI-augmented for faster delivery without cutting corners.">
 <meta name="author" content="Akash Bambhaniya">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
 <link rel="canonical" href="https://akashb.in/">
 <meta name="theme-color" content="#07080d">
+<script src="theme.js"></script>
 
 <!-- Icons -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2307080d'/%3E%3Ctext x='16' y='22' font-family='Arial,Helvetica,sans-serif' font-size='15' font-weight='700' text-anchor='middle'%3E%3Ctspan fill='%2335e6d1'%3EA%3C/tspan%3E%3Ctspan fill='%239b6bff'%3EB%3C/tspan%3E%3C/text%3E%3C/svg%3E">
@@ -33,9 +34,9 @@
 <meta name="twitter:description" content="Senior Frontend Engineer with 8+ years building scalable dashboards and data-heavy interfaces in React.js, Next.js, and TypeScript.">
 <meta name="twitter:image" content="https://akashb.in/og-image.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" href="/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/space-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jetbrains-mono-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
 
 <!-- Structured data: helps Google understand this page represents a
@@ -94,6 +95,11 @@
       <a href="#contact" class="nav-link nav-link--cta">Hire Me</a>
     </nav>
 
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light theme">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7Z"/></svg>
+    </button>
+
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
       <span></span><span></span><span></span>
     </button>
@@ -113,18 +119,17 @@
         </p>
 
         <h1 class="hero-title">
-          Hi, I'm<br>
           <span class="hero-title-name">Akash Bambhaniya</span>
+          <span class="hero-title-sub">Dashboards and data-heavy interfaces that stay fast at scale.</span>
         </h1>
 
         <p class="hero-desc">
-          I build front-end systems that hold up under real traffic —
-          precise interfaces, clean component architecture, and
-          interactions that feel instant. <span data-dynamic="exp-years-word">Eight years</span> deep in React.js,
-          Next.js, and TypeScript — these days that also means reviewing
-          what AI generates, catching what it misses, and making the
-          architecture and quality calls that keep a product trustworthy
-          once it ships.
+          <span data-dynamic="exp-years-word">Eight years</span> of front-end work — from turning
+          designs into pages, to leading React builds, freelancing with
+          founders and agencies, and now shipping data-heavy products at
+          Turing. I focus on interactive charts, maps, and real-time views
+          in React.js, Next.js, and TypeScript, and I review AI-generated
+          code before it ships.
         </p>
 
         <div class="hero-actions">
@@ -150,7 +155,8 @@
 <pre><code><span class="tok-key">const</span> <span class="tok-var">developer</span> = {
   <span class="tok-prop">name</span>: <span class="tok-str">'Akash Bambhaniya'</span>,
   <span class="tok-prop">role</span>: <span class="tok-str">'Senior Frontend Engineer'</span>,
-  <span class="tok-prop">experience</span>: <span class="tok-num">8</span>,
+  <span class="tok-prop">experience</span>: <span class="tok-num" data-dynamic="exp-years-num">8</span>,
+  <span class="tok-prop">focus</span>: [<span class="tok-str">'dashboards'</span>, <span class="tok-str">'data viz'</span>],
   <span class="tok-prop">stack</span>: [<span class="tok-str">'React'</span>, <span class="tok-str">'Next.js'</span>, <span class="tok-str">'TypeScript'</span>],
   <span class="tok-prop">aiAugmented</span>: <span class="tok-key">true</span>,
   <span class="tok-prop">status</span>: <span class="tok-str">'available'</span><span class="cursor">&nbsp;</span>
@@ -513,7 +519,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 12a8 8 0 1 1-14.6-4.6L4 3l4.8 1.3A8 8 0 0 1 20 12Z"/><path d="M8.5 8.7c.2-.5.6-.5.9-.5h.5c.2 0 .4 0 .6.4l.6 1.5c.1.3 0 .5-.1.7l-.5.6c-.2.2-.2.4 0 .7.4.7 1.3 1.6 2 2 .3.2.5.2.7 0l.6-.5c.2-.2.4-.2.7-.1l1.5.6c.4.2.4.4.4.6v.5c0 .3 0 .7-.5.9-1.3.6-3.3-.1-5-1.8-1.7-1.7-2.4-3.7-1.8-5Z"/></svg>
           </span>
           <span class="contact-card-label">WhatsApp</span>
-          <span class="contact-card-value">+91 72849 05540</span>
+          <span class="contact-card-value">+91 72849 05540<span class="sr-only"> (opens in a new tab)</span></span>
         </a>
 
         <div class="contact-card contact-card--static">
@@ -539,11 +545,11 @@
       <div class="contact-socials contact-socials--center">
         <a href="https://www.linkedin.com/in/akash-bambhaniya/" target="_blank" rel="noopener noreferrer" class="social-link social-link--labeled">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7.5 10.5v6M7.5 7.5v.01M12 16.5v-3.7c0-1.5 1-2.3 2.2-2.3 1.2 0 1.8.9 1.8 2.3v3.7"/></svg>
-          <span>LinkedIn</span>
+          <span>LinkedIn<span class="sr-only"> (opens in a new tab)</span></span>
         </a>
         <a href="https://github.com/Akashnb" target="_blank" rel="noopener noreferrer" class="social-link social-link--labeled">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.5c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.1.39-2 1.03-2.7-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.9-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.7 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
-          <span>GitHub</span>
+          <span>GitHub<span class="sr-only"> (opens in a new tab)</span></span>
         </a>
       </div>
 

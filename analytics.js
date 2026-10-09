@@ -50,7 +50,7 @@
       track('social_click', { network: 'linkedin', placement: where });
     } else if (href.indexOf('github.com') !== -1) {
       track('social_click', { network: 'github', placement: where });
-    } else if (href.charAt(0) === '#' && a.classList.contains('btn')) {
+    } else if (href.charAt(0) === '#' && (a.classList.contains('btn') || a.classList.contains('nav-link--cta'))) {
       track('cta_click', { target: href, label: (a.textContent || '').trim().slice(0, 40) });
     }
   }, { capture: true });

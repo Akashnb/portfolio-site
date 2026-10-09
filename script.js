@@ -94,6 +94,11 @@
       expStat.textContent = years + (expStat.dataset.suffix || '');
     }
 
+    // Plain years number (e.g. in the hero code window)
+    document.querySelectorAll('[data-dynamic="exp-years-num"]').forEach((el) => {
+      el.textContent = String(years);
+    });
+
     // Footer copyright year
     document.querySelectorAll('[data-dynamic="year"]').forEach((el) => {
       el.textContent = String(new Date().getFullYear());
@@ -203,6 +208,8 @@
 
     function drawFrame() {
       ctx.clearRect(0, 0, width, height);
+      // Re-read each frame so the dots follow the theme toggle instantly.
+      const isLight = document.documentElement.dataset.theme === 'light';
 
       // --- move + draw each dot ---
       for (const p of particles) {
@@ -235,7 +242,9 @@
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, 1.6, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(53, 230, 209, 0.55)'; // matches --cyan
+        ctx.fillStyle = isLight
+          ? 'rgba(10, 127, 117, 0.5)' // light-theme --cyan
+          : 'rgba(53, 230, 209, 0.55)'; // dark-theme --cyan
         ctx.fill();
       }
 
@@ -252,9 +261,9 @@
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(155, 107, 255, ${
+            ctx.strokeStyle = `rgba(${isLight ? '106, 63, 216' : '155, 107, 255'}, ${
               0.16 * (1 - dist / LINK_DISTANCE)
-            })`; // matches --violet
+            })`; // matches --violet in each theme
             ctx.lineWidth = 1;
             ctx.stroke();
           }
@@ -456,8 +465,12 @@
             `.nav-link[href="#${entry.target.id}"]`
           );
           if (!activeLink) return;
-          navLinks.forEach((l) => l.classList.remove('active'));
+          navLinks.forEach((l) => {
+            l.classList.remove('active');
+            l.removeAttribute('aria-current');
+          });
           activeLink.classList.add('active');
+          activeLink.setAttribute('aria-current', 'location');
         });
       },
       { rootMargin: '-45% 0px -45% 0px', threshold: 0 } // "in view" = crossing the middle of the screen
@@ -487,6 +500,15 @@
         mainNav.classList.remove('is-open');
         navToggle.setAttribute('aria-expanded', 'false');
       });
+    });
+
+    // Escape closes the open menu and puts focus back on the button.
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mainNav.classList.contains('is-open')) {
+        mainNav.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.focus();
+      }
     });
   }
 
